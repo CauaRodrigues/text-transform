@@ -1,5 +1,4 @@
 import { Poppins } from "next/font/google";
-import Header from "@/components/Header";
 import "@/styles/globals.scss";
 
 const poppins = Poppins({
@@ -23,10 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={poppins.className}>
-        <Header />
-        {children}
-      </body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }

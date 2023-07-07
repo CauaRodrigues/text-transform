@@ -1,4 +1,4 @@
-@use "@/styles/colors.module";
+@use "@/styles/colors";
 
 *,
 *::after,
@@ -18,7 +18,7 @@ body {
 body,
 html {
   background-color: colors.$light-100;
-  color: colors.$blue-100;
+  color: colors.$dark-200;
 }
 
 ul,
