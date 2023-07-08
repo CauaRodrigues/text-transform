@@ -1,7 +1,13 @@
+import Header from "@/components/Header";
+
 export default function Tools() {
   return (
-    <main>
-      <h1>Ferramentas</h1>
-    </main>
+    <>
+      <Header />
+
+      <main>
+        <h1>Ferramentas</h1>
+      </main>
+    </>
   );
 }

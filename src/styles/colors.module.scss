@@ -1,0 +1,41 @@
+$primary-transparent: #fc4b2f0d;
+$primary-100: #fc4b2f;
+
+$secondary-transparent: #2d303942;
+$secondary-100: #0c101e;
+
+$light-100: #ffffff;
+$light-200: #efefef;
+
+$gray-100: #7f8596;
+$gray-200: #5c5c5c;
+$gray-300: #363943;
+
+$dark-100: #000000;
+$dark-200: #151515;
+$dark-300: #343434;
+
+$blue-100: #153cc3;
+$red-100: #ef1717;
+
+:export {
+  primaryTransparentColor: $primary-transparent;
+  primaryColor100: $primary-100;
+
+  secondaryTransparentColor: $secondary-transparent;
+  secondaryColor100: $secondary-100;
+
+  lightColor100: $light-100;
+  lightColor200: $light-200;
+
+  grayColor100: $gray-100;
+  grayColor200: $gray-200;
+  grayColor300: $gray-300;
+
+  darkColor100: $dark-100;
+  darkColor200: $dark-200;
+  darkColor300: $dark-300;
+
+  blueColor100: $blue-100;
+  redColor100: $red-100;
+}

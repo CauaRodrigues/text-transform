@@ -1,0 +1,73 @@
+@use "@/styles/colors.module";
+@use "@/styles/fonts.scss";
+
+.banner {
+  width: 50%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  text-align: center;
+  color: colors.$light-100;
+
+  @media (max-width: 1330px) {
+    width: 70%;
+  }
+
+  @media (max-width: 965px) {
+    width: 100%;
+  }
+
+  h1 {
+    color: colors.$primary-100;
+    font-size: min(5rem, 12vw);
+    font-weight: fonts.$wg-bold;
+    line-height: 1;
+  }
+
+  p {
+    font-size: min(1.05rem, 5vw);
+    font-weight: fonts.$wg-medium;
+  }
+}
+
+.searchField {
+  width: 80%;
+  margin: 12px 0;
+
+  display: flex;
+  align-items: center;
+
+  background-color: colors.$light-100;
+  border-radius: 12px;
+
+  input {
+    flex: 1;
+    padding: 14px 12px;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    font-size: min(0.9rem, 4vw);
+    font-weight: fonts.$wg-medium;
+
+    &::placeholder {
+      color: colors.$dark-300;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  img {
+    margin: 0 10px;
+  }
+}
+
+.btnGroup {
+  display: flex;
+  gap: 1.4rem;
+}
