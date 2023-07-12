@@ -5,12 +5,15 @@ import styles from "./styles.module.scss";
 export default function Menu() {
   return (
     <nav className={styles.nav}>
-      <Image
-        src="/assets/logo.svg"
-        alt="Text Transform Logo"
-        width={300}
-        height={80}
-      />
+      <Link href="/">
+        <Image
+          src="/assets/logo.svg"
+          alt="Text Transform Logo"
+          width={300}
+          height={60}
+          className={styles.logo}
+        />
+      </Link>
 
       <ul className={styles.links}>
         <li>
@@ -29,6 +32,12 @@ export default function Menu() {
           <Link href="/">Apoiar</Link>
         </li>
       </ul>
+
+      <button className={styles.menuMobile}>
+        <span />
+        <span />
+        <span />
+      </button>
     </nav>
   );
 }
