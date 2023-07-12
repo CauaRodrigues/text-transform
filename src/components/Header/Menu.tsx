@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.scss";
+import MenuMobile from "./MenuMobile";
 
 export default function Menu() {
   return (
@@ -33,11 +34,7 @@ export default function Menu() {
         </li>
       </ul>
 
-      <button className={styles.menuMobile}>
-        <span />
-        <span />
-        <span />
-      </button>
+      <MenuMobile />
     </nav>
   );
 }

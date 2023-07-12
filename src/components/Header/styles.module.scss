@@ -51,6 +51,7 @@
 
   .links {
     width: 40%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,13 +66,42 @@
     }
 
     li {
+      position: relative;
+      z-index: 1;
+
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+
       text-transform: capitalize;
       font-size: min(1.1rem, 8vw);
       font-weight: 500;
-      cursor: pointer;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: -0.25em;
+        right: -0.25em;
+
+        background-color: colors.$primary-100;
+        transform-origin: center right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
 
       &:hover {
-        color: colors.$primary-100;
+        color: colors.$secondary-100;
+
+        &::before {
+          transform: scaleX(1);
+          transform-origin: center left;
+        }
+      }
+
+      a {
+        color: inherit;
       }
     }
   }

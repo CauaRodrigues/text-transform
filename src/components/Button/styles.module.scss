@@ -10,11 +10,16 @@
 
   background: colors.$primary-100;
   border-radius: 10px;
+  transition: color ease-out 0.3s;
 
   color: colors.$light-100;
   text-align: center;
   font-weight: fonts.$wg-medium;
   font-size: min(1rem, 6vw);
+
+  &:hover {
+    background-color: colors.$primary-200;
+  }
 }
 
 .btnTransparent {
