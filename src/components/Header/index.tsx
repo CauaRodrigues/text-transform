@@ -10,7 +10,7 @@ export default function Header({
   children?: ReactNode;
 }) {
   return (
-    <header className={withFill ? "header--fill" : "header"}>
+    <header className={withFill ? "header--fill" : "header--main"}>
       <Menu />
 
       {children ? children : null}

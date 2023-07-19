@@ -28,12 +28,13 @@ export default function Menu() {
           <Link href="/ferramentas">Ferramentas</Link>
         </li>
         <li>
-          <Link href="/">Salvos</Link>
-        </li>
-        <li className="btn--primary">
-          <Link href="/">Apoiar</Link>
+          <Link href="/salvos">Salvos</Link>
         </li>
       </ul>
+
+      <button className="btn--main">
+        <Link href="/">Apoiar</Link>
+      </button>
 
       <MenuMobile />
     </nav>
