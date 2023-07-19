@@ -1,5 +1,6 @@
-@use "@/styles/colors.module";
-@use "@/styles/fonts.scss";
+@use "@/styles/utils/colors";
+@use "@/styles/utils/fonts";
+@use "@/styles/utils/components";
 
 .banner {
   width: 50%;
@@ -30,12 +31,12 @@
   }
 
   p {
-    font-size: min(1rem, 3.5vw);
+    font-size: min(1.2rem, 3.5vw);
     font-weight: fonts.$wg-regular;
   }
 }
 
-.searchField {
+.search-field {
   width: 80%;
   min-width: max-content;
   margin: 12px 0;
@@ -76,7 +77,15 @@
   }
 }
 
-.btnGroup {
+.btn-group {
   display: flex;
   gap: 1.4rem;
+
+  .btn--primary {
+    @include components.button(colors.$primary-100, colors.$light-100, false);
+  }
+
+  .btn--transparent {
+    @include components.button(false, colors.$primary-100, true);
+  }
 }

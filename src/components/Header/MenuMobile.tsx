@@ -1,8 +1,6 @@
-import styles from "./styles.module.scss";
-
 export default function MenuMobile() {
   return (
-    <button className={styles.menuMobile}>
+    <button className="btn--burger">
       <span />
       <span />
       <span />

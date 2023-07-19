@@ -1,37 +1,33 @@
 import Header from "@/components/Header";
-import { NavigateButton } from "@/components/Button";
 import SearchField from "./SearchField";
-
-import styles from "./page.module.scss";
-import colors from "@/styles/colors.module.scss";
+import Link from "next/link";
+import "./page.scss";
 
 export default function Home() {
   return (
     <>
       <Header withFill>
-        <section className={styles.banner}>
+        <section className="banner">
           <h1>Text Transform</h1>
           <p>
-            Estilize, formate textos, converta para maiúsculo ou minúsculo, gere
-            textos Lorem Ipsum, codifique textos e muito mais.
+            Edite e estilize seus textos com um clique usando nossas ferramentas
+            inteligentes e práticas.
           </p>
 
           <SearchField />
 
-          <div className={styles.btnGroup}>
-            <NavigateButton
-              title="Ferramentas"
-              to="/ferramentas"
-              colorText={colors.lightColor100}
-              bgColor={colors.primaryColor100}
-            />
+          <div className="btn-group">
+            <Link
+              href="/ferramentas"
+              className="btn--primary"
+              title="Página de Ferramentas"
+            >
+              Ferramentas
+            </Link>
 
-            <NavigateButton
-              title="Saiba Mais"
-              to="/sobre"
-              transparent
-              colorText={colors.primaryColor100}
-            />
+            <Link href="/sobre" className="btn--transparent" title="Sobre nós">
+              Saiba Mais
+            </Link>
           </div>
         </section>
       </Header>

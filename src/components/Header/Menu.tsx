@@ -1,22 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./styles.module.scss";
+
 import MenuMobile from "./MenuMobile";
+import "./styles.scss";
 
 export default function Menu() {
   return (
-    <nav className={styles.nav}>
+    <nav className="header--nav">
       <Link href="/">
         <Image
           src="/assets/logo.svg"
           alt="Text Transform Logo"
           width={300}
           height={60}
-          className={styles.logo}
+          className="logo"
         />
       </Link>
 
-      <ul className={styles.links}>
+      <ul className="list-links">
         <li>
           <Link href="/">Início</Link>
         </li>
@@ -29,7 +30,7 @@ export default function Menu() {
         <li>
           <Link href="/">Salvos</Link>
         </li>
-        <li>
+        <li className="btn--primary">
           <Link href="/">Apoiar</Link>
         </li>
       </ul>

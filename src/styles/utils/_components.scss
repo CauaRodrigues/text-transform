@@ -1,0 +1,31 @@
+@use "./colors";
+@use "./fonts";
+
+@mixin button($bgColor: transparent, $color: null, $withBorder: null) {
+  padding: 10px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  transition: all 0.4s;
+  background: transparent;
+
+  color: $color;
+  text-align: center;
+  font-weight: fonts.$wg-medium;
+  font-size: min(1rem, 6vw);
+
+  @if $bgColor {
+    background: $bgColor;
+  }
+
+  @if $withBorder {
+    border: 2px solid $color;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

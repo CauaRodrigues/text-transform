@@ -1,4 +1,4 @@
-@use "@/styles/colors.module";
+@use "@/styles/utils/colors";
 
 .header {
   width: 100%;
@@ -17,7 +17,8 @@
   }
 }
 
-.backgroundFill {
+.header--fill {
+  @extend .header;
   background-image: url(/assets/images/background.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,11 +26,7 @@
   object-fit: cover;
 }
 
-.headerWithBg {
-  @extend .header, .backgroundFill;
-}
-
-.nav {
+.header--nav {
   width: 90%;
   height: max-content;
 
@@ -49,7 +46,7 @@
     }
   }
 
-  .links {
+  .list-links {
     width: 40%;
 
     display: flex;
@@ -107,7 +104,7 @@
   }
 }
 
-.menuMobile {
+.btn--burger {
   @media (min-width: 770px) {
     display: none;
   }

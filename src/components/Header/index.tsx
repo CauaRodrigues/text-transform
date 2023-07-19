@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import Menu from "./Menu";
-import styles from "./styles.module.scss";
+import "./styles.scss";
 
 export default function Header({
   withFill,
@@ -10,7 +10,7 @@ export default function Header({
   children?: ReactNode;
 }) {
   return (
-    <header className={withFill ? styles.headerWithBg : styles.header}>
+    <header className={withFill ? "header--fill" : "header"}>
       <Menu />
 
       {children ? children : null}
