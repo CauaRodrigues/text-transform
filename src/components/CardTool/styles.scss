@@ -3,14 +3,20 @@
 @use "@/styles/utils/fonts";
 
 .box__card-tools {
+  width: 100%;
+  margin-bottom: 12px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 14px;
+
+  background-color: colors.$light-200;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25);
 
   header {
     width: 100%;
-    height: 100px;
+    height: 120px;
     padding: 0 16px;
 
     display: flex;
@@ -19,6 +25,8 @@
 
     background: linear-gradient(317deg, #ba2dfd 0%, #0012b3 100%);
     background-blend-mode: darken;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
 
     h3 {
       @include components.typography(
@@ -38,4 +46,36 @@
 
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  h4 {
+    @include components.typography(
+      fonts.$sz-normal,
+      colors.$dark-200,
+      fonts.$wg-semibold
+    );
+  }
+
+  details {
+    summary {
+      cursor: pointer;
+
+      @include components.typography(
+        fonts.$sz-small,
+        colors.$dark-200,
+        fonts.$wg-medium
+      );
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    @include components.typography(
+      fonts.$sz-small,
+      colors.$blue-100,
+      fonts.$wg-medium
+    );
+  }
 }

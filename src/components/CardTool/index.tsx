@@ -15,7 +15,7 @@ export default function CardTool() {
           <summary>Funções</summary>
         </details>
 
-        <Link href="/ferramentas">Usar esta ferramenta</Link>
+        <Link href="/ferramentas">Usar ferramenta</Link>
       </div>
     </div>
   );

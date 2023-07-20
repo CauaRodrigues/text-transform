@@ -37,10 +37,10 @@ export default function Home() {
         <section className="section__container-cards">
           <h2>Ferramentas Populares</h2>
 
-          <div
-            className="container-cards"
-            style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}
-          >
+          <div className="container-cards">
+            <CardTool />
+            <CardTool />
+            <CardTool />
             <CardTool />
             <CardTool />
             <CardTool />
