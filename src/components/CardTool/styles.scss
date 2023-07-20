@@ -1,0 +1,41 @@
+@use "@/styles/utils/components";
+@use "@/styles/utils/colors";
+@use "@/styles/utils/fonts";
+
+.box__card-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 14px;
+
+  header {
+    width: 100%;
+    height: 100px;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(317deg, #ba2dfd 0%, #0012b3 100%);
+    background-blend-mode: darken;
+
+    h3 {
+      @include components.typography(
+        fonts.$sz-large,
+        colors.$light-100,
+        fonts.$wg-bold
+      );
+      text-align: center;
+    }
+  }
+}
+
+.content__card-tools {
+  width: 100%;
+  height: max-content;
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+}

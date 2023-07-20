@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import MenuMobile from "./MenuMobile";
-import "./styles.scss";
 
 export default function Menu() {
   return (

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import SearchField from "./SearchField";
 import Link from "next/link";
 import "./page.scss";
+import CardTool from "@/components/CardTool";
 
 export default function Home() {
   return (
@@ -33,7 +34,28 @@ export default function Home() {
       </Header>
 
       <main>
-        <h1>Home</h1>
+        <section className="section__container-cards">
+          <h2>Ferramentas Populares</h2>
+
+          <div
+            className="container-cards"
+            style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}
+          >
+            <CardTool />
+            <CardTool />
+            <CardTool />
+          </div>
+
+          <Link
+            href="/ferramentas"
+            className="btn--primary"
+            title="Página de Ferramentas"
+          >
+            Mais Ferramentas
+          </Link>
+        </section>
+
+        <section></section>
       </main>
     </>
   );

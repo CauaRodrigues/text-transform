@@ -11,6 +11,7 @@
   border-radius: 10px;
   transition: all 0.4s;
   background: transparent;
+  cursor: pointer;
 
   color: $color;
   text-align: center;
@@ -28,4 +29,10 @@
   &:hover {
     opacity: 0.8;
   }
+}
+
+@mixin typography($size: null, $color: inherit, $weigth: null) {
+  font-size: $size;
+  font-weight: $weigth;
+  color: $color;
 }

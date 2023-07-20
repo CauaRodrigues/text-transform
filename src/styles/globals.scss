@@ -1,1 +1,16 @@
+@use "./utils/colors";
+@use "./utils/components";
 @import "./utils/reset";
+
+main {
+  width: 100%;
+  padding: 16px;
+}
+
+.btn--primary {
+  @include components.button(colors.$primary-100, colors.$light-100, false);
+}
+
+.btn--transparent {
+  @include components.button(false, colors.$primary-100, true);
+}
