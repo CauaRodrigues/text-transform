@@ -85,14 +85,15 @@
 
 .section__container-cards {
   width: 80%;
-  min-height: 96vh;
+  max-width: 1250px;
+  // min-height: 96vh;
   padding: 16px 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 
   @media (max-width: 710px) {
     width: 90%;
@@ -113,10 +114,10 @@
   }
 
   .container-cards {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.3rem;
+    align-items: baseline;
 
     @media (max-width: 940px) {
       grid-template-columns: repeat(2, 1fr);

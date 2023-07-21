@@ -13,6 +13,14 @@ export default function CardTool() {
 
         <details>
           <summary>Funções</summary>
+
+          <ul>
+            <li>bla bla</li>
+            <li>bla bla</li>
+            <li>bla bla</li>
+            <li>bla bla</li>
+            <li>bla bla</li>
+          </ul>
         </details>
 
         <Link href="/ferramentas">Usar ferramenta</Link>
