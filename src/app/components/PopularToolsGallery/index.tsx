@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import CardTool from "@/components/CardTool";
 import Data from "./data.json";
 
-export default function PopularToolsGalley() {
+export default function PopularToolsGallery() {
   const Tools = Data.ToolList;
 
   return (

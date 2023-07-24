@@ -17,3 +17,7 @@ main {
 .btn--transparent {
   @include components.button(false, colors.$primary-100, true);
 }
+
+.btn--black {
+  @include components.button(colors.$dark-100, colors.$light-100, false);
+}
