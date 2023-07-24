@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
-import SearchField from "./SearchField";
 import Link from "next/link";
+import Header from "@/components/Header";
+import SearchField from "./components/SearchField";
+import PopularToolsGalley from "./components/PopularToolsGallery";
 import "./page.scss";
-import CardTool from "@/components/CardTool";
 
 export default function Home() {
   return (
@@ -37,14 +37,7 @@ export default function Home() {
         <section className="section__container-cards">
           <h2>Ferramentas Populares</h2>
 
-          <div className="container-cards">
-            <CardTool />
-            <CardTool />
-            <CardTool />
-            <CardTool />
-            <CardTool />
-            <CardTool />
-          </div>
+          <PopularToolsGalley />
 
           <Link
             href="/ferramentas"
