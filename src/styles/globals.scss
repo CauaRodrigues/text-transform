@@ -1,6 +1,7 @@
 @use "./utils/colors";
 @use "./utils/components";
 @import "./utils/reset";
+@import "./utils/buttons";
 
 main {
   width: 100%;
@@ -8,16 +9,5 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.btn--primary {
-  @include components.button(colors.$primary-100, colors.$light-100, false);
-}
-
-.btn--transparent {
-  @include components.button(false, colors.$primary-100, true);
-}
-
-.btn--black {
-  @include components.button(colors.$dark-100, colors.$light-100, false);
+  background-color: colors.$light-200;
 }

@@ -1,0 +1,84 @@
+@use "@/styles/utils/colors";
+@use "@/styles/utils/fonts";
+@use "@/styles/utils/components";
+
+footer {
+  width: 100%;
+  padding: 24px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: colors.$dark-200;
+  color: colors.$light-100;
+
+  .container__section-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    section.links_about {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 1rem;
+
+      .share-friends {
+        h3 {
+          @include components.typography(
+            fonts.$sz-medium,
+            colors.$primary-100,
+            fonts.$wg-semibold
+          );
+        }
+
+        .social-media--icons {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .box--copyright {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    p {
+      @include components.typography(
+        fonts.$sz-normal,
+        colors.$light-100,
+        fonts.$wg-medium
+      );
+
+      span {
+        @include components.typography(
+          inherit,
+          colors.$primary-100,
+          fonts.$wg-bold
+        );
+      }
+    }
+
+    span.message-to-users {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+
+      @include components.typography(
+        fonts.$sz-small,
+        colors.$light-200,
+        fonts.$wg-regular
+      );
+    }
+  }
+}

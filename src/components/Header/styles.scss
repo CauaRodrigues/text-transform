@@ -48,7 +48,7 @@
     }
   }
 
-  .btn--main {
+  .btn-link {
     @include components.button(colors.$blue-100, colors.$light-100, false);
     padding-left: 18px;
     padding-right: 18px;

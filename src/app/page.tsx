@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import SearchField from "./components/SearchField";
 import PopularToolsGallery from "./components/PopularToolsGallery";
 import "./page.scss";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
       </Header>
 
       <main>
-        <section className="container--cards">
+        <section className="container--cards" id="info_section">
           <h2>Ferramentas Populares</h2>
 
           <PopularToolsGallery />
@@ -48,7 +49,7 @@ export default function Home() {
           </Link>
         </section>
 
-        <section className="container--box-invite">
+        <section className="container--box-invite" id="info_section">
           <div className="box-invite">
             <h2>
               Quer saber mais sobre alguma coisa? Ou deseja entrar em contato
@@ -61,6 +62,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }

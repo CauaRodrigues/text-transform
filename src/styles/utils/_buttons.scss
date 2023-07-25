@@ -1,0 +1,22 @@
+.btn--primary {
+  @include components.button(colors.$primary-100, colors.$light-100, false);
+}
+
+.btn--transparent {
+  @include components.button(false, colors.$primary-100, true);
+}
+
+.btn--black {
+  @include components.button(colors.$dark-100, colors.$light-100, false);
+}
+
+.btn--support {
+  @include components.button(colors.$blue-100, colors.$light-100, false);
+}
+
+#btn__icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+}

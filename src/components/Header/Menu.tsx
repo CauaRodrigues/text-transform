@@ -30,7 +30,7 @@ export default function Menu() {
         </li>
       </ul>
 
-      <button className="btn--main">
+      <button className="btn--support btn-link">
         <Link href="/">Apoiar</Link>
       </button>
 
