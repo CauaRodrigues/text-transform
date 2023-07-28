@@ -28,7 +28,7 @@ export default function Footer() {
             height={60}
           />
 
-          <p className="description">
+          <p className="description_about">
             Lorem ipsum dolor sit amet consectetur adipiscing elit tortor urna
             aptent, non congue justo varius lectus odio ut in suspendisse.
           </p>
