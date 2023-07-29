@@ -25,7 +25,7 @@
 
   h1 {
     @include components.typography(
-      fonts.$sz-large-xx,
+      fonts.$sz-large-xxx,
       colors.$primary-100,
       fonts.$wg-bold
     );
@@ -81,18 +81,6 @@
 .btn-group {
   display: flex;
   gap: 1.4rem;
-}
-
-section#info_section {
-  width: 80%;
-
-  @media (max-width: 710px) {
-    width: 90%;
-  }
-
-  @media (max-width: 500px) {
-    width: 100%;
-  }
 }
 
 section.container--cards {

@@ -11,3 +11,15 @@ main {
   align-items: center;
   background-color: colors.$light-200;
 }
+
+section#info_section {
+  width: 80%;
+
+  @media (max-width: 710px) {
+    width: 90%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+}

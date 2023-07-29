@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import SearchField from "./components/SearchField";
 import PopularToolsGallery from "./components/PopularToolsGallery";
 import "./page.scss";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -62,8 +61,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }
