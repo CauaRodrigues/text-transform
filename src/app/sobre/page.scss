@@ -2,7 +2,7 @@
 @use "@/styles/utils/fonts";
 @use "@/styles/utils/components";
 
-section.container--hero_about {
+section.hero_about {
   max-width: 1200px;
   width: 85%;
   min-height: 85vh;
@@ -83,6 +83,74 @@ section.container--hero_about {
     }
     50% {
       transform: translateY(30px);
+    }
+  }
+}
+
+section.motivation_about {
+  width: 100%;
+  min-height: 70vh;
+  padding: 24px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .box--motivation {
+    max-width: 700px;
+    width: 70%;
+    padding: 32px;
+    margin: 32px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    border-radius: 42px;
+    background-color: colors.$primary-100;
+
+    color: colors.$light-100;
+    text-align: center;
+
+    @media (min-width: 802px) {
+      box-shadow: 30px 30px 14px 0px colors.$primary-300;
+    }
+
+    @media (max-width: 802px) and (min-width: 802px) {
+      width: 85%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    h2 {
+      @include components.typography(
+        fonts.$sz-large-x,
+        colors.$light-100,
+        fonts.$wg-bold
+      );
+    }
+
+    p {
+      @include components.typography(
+        fonts.$sz-medium,
+        colors.$light-100,
+        fonts.$wg-regular
+      );
+    }
+
+    @media (max-width: 480px) {
+      padding: 16px;
+
+      h2 {
+        font-size: fonts.$sz-large;
+      }
+
+      p {
+        font-size: fonts.$sz-normal;
+      }
     }
   }
 }

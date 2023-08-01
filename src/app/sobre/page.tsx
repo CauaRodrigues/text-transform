@@ -9,7 +9,7 @@ export default function About() {
       <Header />
 
       <main>
-        <section className="container--hero_about">
+        <section className="hero_about">
           <div className="container--content_about">
             <div className="box--content_text">
               <h1>Sobre Nós</h1>
@@ -40,8 +40,8 @@ export default function About() {
           />
         </section>
 
-        <section>
-          <div>
+        <section className="motivation_about">
+          <div className="box--motivation">
             <h2>Motivação</h2>
 
             <p>

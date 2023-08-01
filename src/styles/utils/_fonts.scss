@@ -1,16 +1,20 @@
+// Weight
 $wg-light: 300;
 $wg-regular: 400;
 $wg-medium: 500;
 $wg-semibold: 600;
 $wg-bold: 700;
 
+// Sizes
 $sz-small-xx: 0.76rem;
 $sz-small-x: min(0.8rem, 3vw);
 $sz-small: min(0.9rem, 4vw);
+
 $sz-normal: min(1rem, 6vw);
 $sz-regular: min(1.1rem, 8vw);
-$sz-medium: min(1.16rem, 9vw);
+$sz-medium: min(1.16rem, 6vw);
+
 $sz-large: min(1.45rem, 6vw);
-$sz-large-x: min(2rem, 8vw);
+$sz-large-x: min(2.3rem, 8vw);
 $sz-large-xx: min(4rem, 12vw);
 $sz-large-xxx: min(5rem, 12vw);
