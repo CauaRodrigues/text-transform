@@ -26,6 +26,10 @@
   background-repeat: no-repeat;
   background-position: center;
   object-fit: cover;
+
+  .header--nav .list-links li:hover {
+    color: colors.$secondary-100;
+  }
 }
 
 .header--nav {
@@ -105,7 +109,7 @@
       }
 
       &:hover {
-        color: colors.$secondary-100;
+        color: colors.$light-100;
 
         &::before {
           transform: scaleX(1);
