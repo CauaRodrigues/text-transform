@@ -1,0 +1,28 @@
+@use "@/styles/utils/colors";
+@use "@/styles/utils/fonts";
+@use "@/styles/utils/components";
+
+.gallery__cards {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+  align-items: baseline;
+
+  @media (max-width: 1200px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1126px) {
+    width: 98%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

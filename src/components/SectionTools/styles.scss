@@ -1,0 +1,21 @@
+@use "@/styles/utils/colors";
+@use "@/styles/utils/fonts";
+@use "@/styles/utils/components";
+
+section.wrapper__tool-category {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  h2 {
+    margin-bottom: 16px;
+    @include components.typography(
+      fonts.$sz-large-x,
+      colors.$dark-300,
+      fonts.$wg-bold
+    );
+  }
+}
