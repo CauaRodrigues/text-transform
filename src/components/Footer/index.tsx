@@ -29,8 +29,10 @@ export default function Footer() {
           />
 
           <p className="description_about">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit tortor urna
-            aptent, non congue justo varius lectus odio ut in suspendisse.
+            Nossas ferramentas e geradores são projetados para impulsionar sua
+            criatividade e tornar o processo de criação mais eficiente.
+            Simplifique seu trabalho e alcance resultados excepcionais com nossa
+            ajuda!
           </p>
 
           <div className="share-friends">
@@ -40,30 +42,35 @@ export default function Footer() {
               <Image
                 src={FacebookIcon}
                 alt="Facebook"
+                className="icon"
                 width={ICON_WIDTH}
                 height={ICON_HEIGHT}
               />
               <Image
                 src={TwitterIcon}
                 alt="Compartilhar no Twitter"
+                className="icon"
                 width={ICON_WIDTH}
                 height={ICON_HEIGHT}
               />
               <Image
                 src={LinkedInIcon}
                 alt="LinkedIn"
+                className="icon"
                 width={ICON_WIDTH}
                 height={ICON_HEIGHT}
               />
               <Image
                 src={CopyLinkIcon}
                 alt="Copiar Link"
+                className="icon"
                 width={ICON_WIDTH}
                 height={ICON_HEIGHT}
               />
               <Image
                 src={OthersIcon}
                 alt="Outras Opções"
+                className="icon"
                 width={ICON_WIDTH}
                 height={ICON_HEIGHT}
               />
@@ -71,7 +78,13 @@ export default function Footer() {
           </div>
 
           <button className="btn--support" id="btn__icon">
-            <Image src={HeartIcon} alt="heart icon" width={23} height={21.1} />
+            <Image
+              src={HeartIcon}
+              alt="heart icon"
+              className="icon"
+              width={23}
+              height={21.1}
+            />
             Compre-me um café
           </button>
         </section>
@@ -187,8 +200,21 @@ export default function Footer() {
 
         <span className="message-to-users">
           Feito com{" "}
-          <Image src={HeartIcon} alt="heart icon" width={20.71} height={19} /> e{" "}
-          <Image src={CoffeeIcon} alt="coffee icon" width={18.98} height={19} />
+          <Image
+            src={HeartIcon}
+            alt="heart icon"
+            className="icon"
+            width={20.71}
+            height={19}
+          />{" "}
+          e{" "}
+          <Image
+            src={CoffeeIcon}
+            alt="coffee icon"
+            className="icon"
+            width={18.98}
+            height={19}
+          />
         </span>
       </div>
     </footer>

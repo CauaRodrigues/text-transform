@@ -1,12 +1,14 @@
 import Header from "@/components/Header";
+import "./page.scss";
 
 export default function Tools() {
   return (
     <>
       <Header />
 
-      <main>
-        <h1>Ferramentas</h1>
+      <main className="page-tools">
+        <aside></aside>
+        <article></article>
       </main>
     </>
   );

@@ -15,11 +15,12 @@ export default function About() {
             <div className="box--content_text">
               <h1>Sobre Nós</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit dictumst
-                mollis, taciti fermentum posuere venenatis aliquet velit purus
-                malesuada penatibus, maecenas potenti condimentum sociosqu
-                tempus aptent magna primis, id felis enim tristique aliquam
-                suspendisse vulputate curae.
+                Desperte seu potencial criativo com nossas ferramentas e
+                geradores dedicados à eficiência. Nosso foco em edição,
+                manipulação e estilização de textos torna a criação mais ágil.
+                Os geradores de lorem ipsum, dados fictícios, senhas e mais
+                agilizam tarefas repetitivas. Simplifique sua vida criativa e
+                alcance resultados excepcionais em menos tempo!
               </p>
             </div>
 
