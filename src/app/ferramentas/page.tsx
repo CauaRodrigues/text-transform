@@ -29,7 +29,7 @@ export default function Tools() {
           </header>
 
           <section>
-            <div>
+            <div className="box__category-tools">
               <h3>Manipular Texto</h3>
               <ul>
                 <li>Formatação de Texto</li>
@@ -39,7 +39,7 @@ export default function Tools() {
               </ul>
             </div>
 
-            <div>
+            <div className="box__category-tools">
               <h3>Análise de Texto</h3>
               <ul>
                 <li>Contador de Caracteres</li>
@@ -49,7 +49,7 @@ export default function Tools() {
               </ul>
             </div>
 
-            <div>
+            <div className="box__category-tools">
               <h3>Aleatório</h3>
               <ul>
                 <li>Sortear Números</li>
@@ -60,7 +60,7 @@ export default function Tools() {
               </ul>
             </div>
 
-            <div>
+            <div className="box__category-tools">
               <h3>Geradores</h3>
               <ul>
                 <li>Gerar Lorem Ispum</li>
@@ -69,7 +69,7 @@ export default function Tools() {
               </ul>
             </div>
 
-            <div>
+            <div className="box__category-tools">
               <h3>Criptografia e Codificação</h3>
               <ul>
                 <li>Código Morse</li>
