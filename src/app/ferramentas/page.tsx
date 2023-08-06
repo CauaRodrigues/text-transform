@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Header from "@/components/Header";
 import SectionTools from "@/components/SectionTools";
+import SearchIcon from "@/assets/icons/magnify-gray.svg";
 import "./page.scss";
 
 export default function Tools() {
@@ -8,7 +10,24 @@ export default function Tools() {
       <Header />
 
       <main className="page-tools">
-        <aside></aside>
+        <aside>
+          <div className="field__search-tools">
+            <input
+              type="text"
+              id="searchTool"
+              name="searchTool"
+              placeholder="Procurar"
+            />
+            <button>
+              <Image
+                src={SearchIcon}
+                alt="pesquisar"
+                width={27}
+                height={27.02}
+              />
+            </button>
+          </div>
+        </aside>
 
         <article>
           <h1>As melhores ferramentas em um só lugar.</h1>
