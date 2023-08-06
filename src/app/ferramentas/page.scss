@@ -13,8 +13,12 @@ main.page-tools {
   justify-content: space-between;
   gap: 2rem;
 
+  @media (max-width: 788px) {
+    padding: 24px 12px;
+  }
+
   aside {
-    width: 250px;
+    width: 280px;
     height: 800px;
 
     border: 2px solid colors.$gray-100;
@@ -22,6 +26,10 @@ main.page-tools {
     border-radius: 12px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+
+    @media (max-width: 788px) {
+      display: none;
+    }
 
     .field__search-tools {
       width: 100%;
@@ -69,6 +77,10 @@ main.page-tools {
     justify-content: space-around;
     align-items: center;
     gap: 1.8rem;
+
+    @media (max-width: 788px) {
+      width: 100%;
+    }
 
     h1 {
       margin: 32px 0;
