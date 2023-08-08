@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import SectionTools from "@/components/SectionTools";
 import SearchIcon from "@/assets/icons/magnify-gray.svg";
 import "./page.scss";
+import Link from "next/link";
 
 export default function Tools() {
   return (
@@ -10,7 +11,7 @@ export default function Tools() {
       <Header />
 
       <main className="page-tools">
-        <aside>
+        <aside className="menu__list-tools">
           <header className="field__search-tools">
             <input
               type="text"
@@ -32,50 +33,94 @@ export default function Tools() {
             <div className="box__category-tools">
               <h3>Manipular Texto</h3>
               <ul>
-                <li>Formatação de Texto</li>
-                <li>Censurar Textos</li>
-                <li>Estilizar Texto</li>
-                <li>Ordenar Lista</li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Formatação de Texto</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Censurar Textos</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Estilizar Texto</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Ordenar Lista</Link>
+                </li>
               </ul>
             </div>
 
             <div className="box__category-tools">
               <h3>Análise de Texto</h3>
               <ul>
-                <li>Contador de Caracteres</li>
-                <li>Comparação de Textos</li>
-                <li>Localizar Palavras</li>
-                <li>Corretor Ortográfico</li>
+                <li>
+                  <Link href="/ferramentas/${tool}">
+                    Contador de Caracteres
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Comparação de Textos</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Localizar Palavras</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Corretor Ortográfico</Link>
+                </li>
               </ul>
             </div>
 
             <div className="box__category-tools">
               <h3>Aleatório</h3>
               <ul>
-                <li>Sortear Números</li>
-                <li>Sortear Lista de Nomes</li>
-                <li>Sortear Equipes</li>
-                <li>Jogar Dados</li>
-                <li>Ordenação Aletória</li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Sortear Números</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">
+                    Sortear Lista de Nomes
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Sortear Equipes</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Jogar Dados</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Ordenação Aletória</Link>
+                </li>
               </ul>
             </div>
 
             <div className="box__category-tools">
               <h3>Geradores</h3>
               <ul>
-                <li>Gerar Lorem Ispum</li>
-                <li>Gerar Nomes</li>
-                <li>Gerar Senhas</li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Gerar Lorem Ispum</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Gerar Nomes</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Gerar Senhas</Link>
+                </li>
               </ul>
             </div>
 
             <div className="box__category-tools">
               <h3>Criptografia e Codificação</h3>
               <ul>
-                <li>Código Morse</li>
-                <li>Código Binário</li>
-                <li>Código Hexadecimal</li>
-                <li>Criptografar Textos</li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Código Morse</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Código Binário</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Código Hexadecimal</Link>
+                </li>
+                <li>
+                  <Link href="/ferramentas/${tool}">Criptografar Textos</Link>
+                </li>
               </ul>
             </div>
           </section>
