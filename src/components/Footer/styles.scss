@@ -101,6 +101,8 @@ footer {
         width: 100%;
 
         h3 {
+          margin-bottom: 12px;
+
           @include components.typography(
             fonts.$sz-medium,
             colors.$primary-100,

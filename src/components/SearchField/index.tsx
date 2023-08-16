@@ -1,9 +1,10 @@
 import Image from "next/image";
 import IconSearch from "@/assets/icons/search-icon.svg";
+import "./styles.scss";
 
 export default function SearchField() {
   return (
-    <div className="search-field">
+    <div className="field--tools-search">
       <input
         type="text"
         name="search"

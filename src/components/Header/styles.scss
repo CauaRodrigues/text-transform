@@ -21,18 +21,18 @@
 
 .header--fill {
   @extend .header--main;
-  background-image: url(/assets/images/background.png);
+  background-image: url("/assets/images/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   object-fit: cover;
 
-  .header--nav .list-links li:hover {
+  .header__nav .list-links li:hover {
     color: colors.$secondary-100;
   }
 }
 
-.header--nav {
+.header__nav {
   width: 90%;
   height: max-content;
 
@@ -44,7 +44,7 @@
     width: 100%;
   }
 
-  .logo {
+  .nav__logo {
     width: 250px;
     height: auto;
 
@@ -53,17 +53,13 @@
     }
   }
 
-  .btn-link {
-    @include components.button(colors.$blue-100, colors.$light-100, false);
-    padding-left: 18px;
-    padding-right: 18px;
-
+  .btn--support {
     @media (max-width: 770px) {
       display: none;
     }
   }
 
-  .list-links {
+  .nav__links {
     width: 40%;
 
     display: flex;

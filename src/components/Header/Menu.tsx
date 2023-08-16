@@ -4,18 +4,18 @@ import MenuMobile from "./MenuMobile";
 
 export default function Menu() {
   return (
-    <nav className="header--nav">
+    <nav className="header__nav">
       <Link href="/">
         <Image
           src="/assets/logo.svg"
           alt="Text Transform Logo"
+          className="nav__logo"
           width={300}
           height={60}
-          className="logo"
         />
       </Link>
 
-      <ul className="list-links">
+      <ul className="nav__links">
         <li>
           <Link href="/">Início</Link>
         </li>
@@ -30,7 +30,7 @@ export default function Menu() {
         </li>
       </ul>
 
-      <button className="btn--support btn-link">
+      <button className="btn--support">
         <Link href="/">Apoiar</Link>
       </button>
 

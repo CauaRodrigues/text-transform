@@ -5,10 +5,13 @@
 
 main {
   width: 100%;
-  padding: 16px;
+  padding: 24px 16px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+
   background-color: colors.$light-100;
 }
 
@@ -16,7 +19,7 @@ main {
   color: colors.$primary-100;
 }
 
-section#info_section {
+section#container__info {
   width: 80%;
 
   @media (max-width: 710px) {

@@ -2,7 +2,7 @@
 @use "@/styles/utils/fonts";
 @use "@/styles/utils/components";
 
-.banner {
+.header__banner {
   width: 50%;
   height: 90vh;
 
@@ -37,53 +37,12 @@
   }
 }
 
-.search-field {
-  width: 80%;
-  min-width: max-content;
-  margin: 12px 0;
-
-  display: flex;
-  align-items: center;
-
-  background-color: colors.$light-100;
-  border-radius: 12px;
-
-  @media (max-width: 512px) {
-    width: 70%;
-  }
-
-  input {
-    flex: 1;
-    padding: 14px 12px;
-    border-top-left-radius: inherit;
-    border-bottom-left-radius: inherit;
-    font-size: fonts.$sz-small-x;
-    font-weight: fonts.$wg-medium;
-
-    &::placeholder {
-      color: colors.$dark-300;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  img {
-    margin: 0 10px;
-
-    @media (max-width: 512px) {
-      width: 20px;
-    }
-  }
-}
-
-.btn-group {
+.btn__group {
   display: flex;
   gap: 1.4rem;
 }
 
-section.container--cards {
+section.container__popular-tools {
   max-width: 1250px;
   padding: 16px 0;
 
@@ -102,30 +61,16 @@ section.container--cards {
       fonts.$wg-bold
     );
   }
-
-  .container-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.3rem;
-    align-items: baseline;
-
-    @media (max-width: 940px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (max-width: 450px) {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
 }
 
-section.container--box-invite {
+section.container__box-invite {
   min-height: 45vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .box-invite {
+  .box__invite {
     width: 100%;
     margin: 12px;
     padding: 24px;
@@ -143,7 +88,7 @@ section.container--box-invite {
       rgba(8, 222, 184, 0.11) 100%
     );
     border-radius: 23px;
-    box-shadow: 16px 16px 43px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 8px 8px 32px 0px rgba(0, 0, 0, 0.26);
 
     @media (max-width: 600px) {
       margin: 34px 0;
