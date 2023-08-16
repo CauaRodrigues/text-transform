@@ -12,9 +12,9 @@ export default function About() {
       <Header />
 
       <main>
-        <section className="hero_about">
-          <div className="container--content_about">
-            <div className="box--content_text">
+        <section className="hero--about">
+          <div className="container__content--about">
+            <div className="box__content--text">
               <h1>Sobre Nós</h1>
               <p>
                 Desperte seu potencial criativo com nossas ferramentas e
@@ -29,7 +29,7 @@ export default function About() {
             <Image
               src="/assets/images/hero-about.jpg"
               alt="Pessoa digitando no notebook"
-              className="hero-about"
+              className="hero__about--image"
               width={718}
               height={478.67}
             />
@@ -38,14 +38,14 @@ export default function About() {
           <Image
             src={ScrollIndicatorIcon}
             alt="Scroll Indicator"
-            className="scroll_indicator"
+            className="scroll-indicator"
             width={55}
             height={53}
           />
         </section>
 
-        <section className="motivation_about">
-          <div className="box--motivation">
+        <section className="motivation--about">
+          <div className="box__motivation--content">
             <h2>Motivação</h2>
 
             <p>
@@ -61,9 +61,9 @@ export default function About() {
           </div>
         </section>
 
-        <section className="contact">
-          <div className="text-content_form">
-            <div className="about-feedback">
+        <section className="container__contact">
+          <div className="form--container__content--text">
+            <div className="box__about--feedback">
               <h2>Seu feedback nos ajuda a melhorar!</h2>
 
               <p>
@@ -74,7 +74,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="box--contribute">
+            <div className="box__about--contribute">
               <h3>
                 <span id="text--primary">Contribua</span> com a nossa missão!
               </h3>
@@ -128,7 +128,7 @@ export default function About() {
               />
             </div>
 
-            <label htmlFor="notrobot" className="field-check">
+            <label htmlFor="notrobot" className="field--check">
               Eu não sou um robô
               <input type="checkbox" id="notrobot" name="notrobot" />
               <span className="checkmark"></span>
