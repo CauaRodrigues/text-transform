@@ -1,5 +1,5 @@
 import Image from "next/image";
-import IconSearch from "@/assets/icons/search-icon.svg";
+import IconSearch from "@/assets/icons/utils/magnify-black.svg";
 import "./styles.scss";
 
 export default function SearchField() {

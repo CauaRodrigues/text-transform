@@ -1,8 +1,10 @@
 import Image from "next/image";
-import Header from "@/components/Header";
-import ScrollIndicatorIcon from "@/assets/icons/scroll-indicator.svg";
-import "./page.scss";
 import Link from "next/link";
+
+import Header from "@/components/Header";
+import ScrollIndicatorIcon from "@/assets/icons/utils/scroll-indicator.svg";
+
+import "./page.scss";
 
 export default function About() {
   return (

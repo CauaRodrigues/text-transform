@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import Header from "@/components/Header";
 import SectionTools from "@/components/SectionTools";
-import SearchIcon from "@/assets/icons/magnify-gray.svg";
-import Link from "next/link";
+import SearchIcon from "@/assets/icons/utils/magnify-gray.svg";
+
 import "./page.scss";
 
 export default function Tools() {

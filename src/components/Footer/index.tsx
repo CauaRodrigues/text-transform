@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import FacebookIcon from "@/assets/icons/facebook.svg";
-import TwitterIcon from "@/assets/icons/twitter.svg";
-import LinkedInIcon from "@/assets/icons/linkedin.svg";
-import CopyLinkIcon from "@/assets/icons/link.svg";
-import OthersIcon from "@/assets/icons/others.svg";
+import FacebookIcon from "@/assets/icons/socialMedia/facebook.svg";
+import TwitterIcon from "@/assets/icons/socialMedia/twitter.svg";
+import LinkedInIcon from "@/assets/icons/socialMedia/linkedin.svg";
+import CopyLinkIcon from "@/assets/icons/utils/link.svg";
+import OthersIcon from "@/assets/icons/utils/others.svg";
 import HeartIcon from "@/assets/icons/heart.svg";
 import CoffeeIcon from "@/assets/icons/coffee.svg";
 
