@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import SectionTools from "@/components/SectionTools";
-import "./page.scss";
 import AsideTools from "@/components/AsideTools";
+
+import "./page.scss";
 
 export default function Tools() {
   return (
