@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
+
 import EmailTemplateParams from "@/utils/EmailTemplate";
 
 const [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY] = [
@@ -11,6 +12,11 @@ const [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY] = [
 ];
 
 export default function Fields() {
+  const [alertMessage, setAlertMessage] = useState({
+    status: "",
+    message: "",
+  });
+
   const [isFieldsFilled, setIsFieldsFilled] = useState(true);
   const [formData, setFormData] = useState({
     topic: "",
@@ -40,15 +46,27 @@ export default function Fields() {
 
     emailjs.send(SERVICE_ID, TEMPLATE_ID, ContactData, PUBLIC_KEY).then(
       (result) => {
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-          topic: "",
-        });
+        if (result.text === "OK") {
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+            topic: "",
+          });
+
+          setAlertMessage({
+            status: "success",
+            message: "Mensagem enviada com sucesso!",
+          });
+        }
       },
       (error) => {
-        console.log(error);
+        if (error) {
+          setAlertMessage({
+            status: "error",
+            message: "Ocorreu um erro. Tente de novo mais tarde.",
+          });
+        }
       },
     );
   };
@@ -60,9 +78,15 @@ export default function Fields() {
   }, [formData]);
 
   return (
-    <form method="POST" action="/api/contact" onSubmit={submitForm}>
+    <form method="POST" onSubmit={submitForm}>
+      {alertMessage.status ? (
+        <div className={`alert__about-form alert--${alertMessage.status}`}>
+          {alertMessage.message}
+        </div>
+      ) : null}
+
       <div className="field">
-        <label htmlFor="topic">tópico</label>
+        <label htmlFor="topic">tópico *</label>
 
         <select
           id="topic"
@@ -71,16 +95,19 @@ export default function Fields() {
           onChange={handleChange}
         >
           <option label="Qual o assunto?" value="" disabled />
-          <option label="Feedback" value="feedback" />
-          <option label="Sugestões" value="sugestoes" />
-          <option label="Dúvidas" value="duvidas" />
-          <option label="Apoiar" value="apoiar" />
-          <option label="Contactar Desenvolvedor" value="contato" />
+          <option label="Feedback" value="Feedback" />
+          <option label="Sugestões" value="Sugestões" />
+          <option label="Dúvidas" value="Dúvidas" />
+          <option label="Apoiar" value="Apoiar" />
+          <option
+            label="Contactar Desenvolvedor"
+            value="Contactar Desenvolvedor"
+          />
         </select>
       </div>
 
       <div className="field">
-        <label htmlFor="name">Nome</label>
+        <label htmlFor="name">Nome *</label>
         <input
           type="text"
           name="name"
@@ -92,7 +119,7 @@ export default function Fields() {
       </div>
 
       <div className="field">
-        <label htmlFor="email">E-mail</label>
+        <label htmlFor="email">E-mail *</label>
         <input
           type="email"
           name="email"
@@ -104,11 +131,13 @@ export default function Fields() {
       </div>
 
       <div className="field">
-        <label htmlFor="message">Mensagem</label>
+        <label htmlFor="message">Mensagem *</label>
         <textarea
           name="message"
           id="message"
-          placeholder={'Escrevra o que você pensando sobre "Tópico"'}
+          placeholder={`Escrevra o que você pensando sobre "${
+            formData.topic || "Tópico"
+          }"`}
           value={formData.message}
           onChange={handleChange}
         />

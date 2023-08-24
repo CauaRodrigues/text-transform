@@ -273,5 +273,25 @@ section.container__contact {
         }
       }
     }
+
+    .alert__about-form {
+      width: 100%;
+      padding: 12px 8px;
+      border-radius: 8px;
+
+      @include components.typography(
+        fonts.$sz-small,
+        colors.$light-100,
+        fonts.$wg-medium
+      );
+
+      &.alert--success {
+        background-color: colors.$green-300;
+      }
+
+      &.alert--error {
+        background-color: colors.$red-200;
+      }
+    }
   }
 }
