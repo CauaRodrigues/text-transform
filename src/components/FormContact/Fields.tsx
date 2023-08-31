@@ -1,17 +1,21 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 import EmailTemplateParams from "@/utils/EmailTemplate";
 
-const [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY] = [
+const [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY, SITE_KEY] = [
   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
   process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
   process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+  process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
 ];
 
 export default function Fields() {
+  const captchaRef = useRef<ReCAPTCHA>(null);
   const [alertMessage, setAlertMessage] = useState({
     status: "",
     message: "",
@@ -23,6 +27,7 @@ export default function Fields() {
     name: "",
     email: "",
     message: "",
+    isHuman: false,
   });
 
   const handleChange = (
@@ -40,6 +45,16 @@ export default function Fields() {
     });
   };
 
+  const verifyRobots = () => {
+    const token = captchaRef.current?.getValue();
+
+    axios.post("/api/verifyRobot", { token }).then(({ data }) => {
+      setFormData((prevState) => {
+        return { ...prevState, isHuman: data.isHuman };
+      });
+    });
+  };
+
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const ContactData = new EmailTemplateParams(formData).params;
@@ -52,12 +67,15 @@ export default function Fields() {
             email: "",
             message: "",
             topic: "",
+            isHuman: false,
           });
 
           setAlertMessage({
             status: "success",
             message: "Mensagem enviada com sucesso!",
           });
+
+          captchaRef.current?.reset();
         }
       },
       (error) => {
@@ -72,7 +90,7 @@ export default function Fields() {
   };
 
   useEffect(() => {
-    !Object.values(formData).includes("")
+    !Object.values(formData).includes("") && formData.isHuman
       ? setIsFieldsFilled(false)
       : setIsFieldsFilled(true);
   }, [formData]);
@@ -143,11 +161,13 @@ export default function Fields() {
         />
       </div>
 
-      <label htmlFor="notrobot" className="field--check">
-        Eu não sou um robô
-        <input type="checkbox" id="notrobot" name="notrobot" />
-        <span className="checkmark"></span>
-      </label>
+      <ReCAPTCHA
+        sitekey={SITE_KEY}
+        onChange={verifyRobots}
+        ref={captchaRef}
+        size="normal"
+        theme="light"
+      />
 
       <button type="submit" className="btn--send" disabled={isFieldsFilled}>
         Enviar
