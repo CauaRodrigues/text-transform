@@ -12,7 +12,7 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error(`error: ${err}`);
     return NextResponse.json({
-      error: "Error verifying reCAPTCHA",
+      error: "Erro ao verificar teste de reCAPTCHA",
       status: 500,
     });
   }

@@ -49,9 +49,22 @@ export default function Fields() {
     const token = captchaRef.current?.getValue();
 
     axios.post("/api/verifyRobot", { token }).then(({ data }) => {
-      setFormData((prevState) => {
-        return { ...prevState, isHuman: data.isHuman };
-      });
+      if (data.error) {
+        captchaRef.current?.reset();
+        setAlertMessage({
+          status: "error",
+          message: data.error,
+        });
+      } else {
+        setFormData((prevState) => {
+          return { ...prevState, isHuman: data.isHuman };
+        });
+
+        setAlertMessage({
+          status: "",
+          message: "",
+        });
+      }
     });
   };
 
