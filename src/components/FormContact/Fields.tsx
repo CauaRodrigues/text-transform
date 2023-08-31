@@ -111,6 +111,7 @@ export default function Fields() {
           name="topic"
           value={formData.topic}
           onChange={handleChange}
+          required
         >
           <option label="Qual o assunto?" value="" disabled />
           <option label="Feedback" value="Feedback" />
@@ -133,6 +134,7 @@ export default function Fields() {
           placeholder="Seu Nome"
           value={formData.name}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -145,6 +147,7 @@ export default function Fields() {
           placeholder="Seu Melhor E-mail"
           value={formData.email}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -158,6 +161,7 @@ export default function Fields() {
           }"`}
           value={formData.message}
           onChange={handleChange}
+          required
         />
       </div>
 
