@@ -3,9 +3,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
-import axios from "axios";
 
 import EmailTemplateParams from "@/utils/EmailTemplate";
+import RobotVerificationService from "@/services/VerifyRobots";
 
 const [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY, SITE_KEY] = [
   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -13,6 +13,8 @@ const [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY, SITE_KEY] = [
   process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
   process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
 ];
+
+const srv = new RobotVerificationService();
 
 export default function Fields() {
   const captchaRef = useRef<ReCAPTCHA>(null);
@@ -48,7 +50,7 @@ export default function Fields() {
   const verifyRobots = () => {
     const token = captchaRef.current?.getValue();
 
-    axios.post("/api/verifyRobot", { token }).then(({ data }) => {
+    srv.verifyToken(token).then((data) => {
       if (data.error) {
         captchaRef.current?.reset();
         setAlertMessage({
@@ -59,7 +61,6 @@ export default function Fields() {
         setFormData((prevState) => {
           return { ...prevState, isHuman: data.isHuman };
         });
-
         setAlertMessage({
           status: "",
           message: "",

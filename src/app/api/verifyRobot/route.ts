@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
-import axios from "axios";
+
+import RobotVerificationService from "@/services/VerifyRobots";
+
+const srv = new RobotVerificationService();
 
 export async function POST(request: Request) {
-  const res = await request.json();
+  const body = await request.json();
   try {
-    const verifyToken = await axios.post(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${res.token}`,
-    );
-
-    return NextResponse.json({ isHuman: verifyToken.data.success });
+    const data = await srv.validateToken(body.token);
+    return NextResponse.json({ isHuman: data.success });
   } catch (err) {
     console.error(`error: ${err}`);
     return NextResponse.json({
