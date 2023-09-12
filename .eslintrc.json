@@ -10,6 +10,7 @@
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:perfectionist/recommended-natural",
     "plugin:prettier/recommended"
   ],
   "overrides": [],
@@ -21,7 +22,13 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "prettier", "@typescript-eslint", "react-hooks"],
+  "plugins": [
+    "react",
+    "prettier",
+    "@typescript-eslint",
+    "react-hooks",
+    "perfectionist"
+  ],
   "settings": {
     "react": {
       "version": "detect"
@@ -30,6 +37,13 @@
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        "type": "natural",
+        "order": "asc"
+      }
+    ]
   }
 }

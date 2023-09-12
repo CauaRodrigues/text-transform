@@ -25,16 +25,16 @@ export default function AsideTools() {
           <h3>Manipular Texto</h3>
           <ul>
             <li>
-              <Link href="/ferramentas/${tool}">Formatação de Texto</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Formatação de Texto</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Censurar Textos</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Censurar Textos</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Estilizar Texto</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Estilizar Texto</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Ordenar Lista</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Ordenar Lista</Link>
             </li>
           </ul>
         </div>
@@ -43,16 +43,18 @@ export default function AsideTools() {
           <h3>Análise de Texto</h3>
           <ul>
             <li>
-              <Link href="/ferramentas/${tool}">Contador de Caracteres</Link>
+              <Link href={`/ferramentas/${"tool"}`}>
+                Contador de Caracteres
+              </Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Comparação de Textos</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Comparação de Textos</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Localizar Palavras</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Localizar Palavras</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Corretor Ortográfico</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Corretor Ortográfico</Link>
             </li>
           </ul>
         </div>
@@ -61,19 +63,21 @@ export default function AsideTools() {
           <h3>Aleatório</h3>
           <ul>
             <li>
-              <Link href="/ferramentas/${tool}">Sortear Números</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Sortear Números</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Sortear Lista de Nomes</Link>
+              <Link href={`/ferramentas/${"tool"}`}>
+                Sortear Lista de Nomes
+              </Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Sortear Equipes</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Sortear Equipes</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Jogar Dados</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Jogar Dados</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Ordenação Aletória</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Ordenação Aletória</Link>
             </li>
           </ul>
         </div>
@@ -82,13 +86,13 @@ export default function AsideTools() {
           <h3>Geradores</h3>
           <ul>
             <li>
-              <Link href="/ferramentas/${tool}">Gerar Lorem Ispum</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Gerar Lorem Ispum</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Gerar Nomes</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Gerar Nomes</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Gerar Senhas</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Gerar Senhas</Link>
             </li>
           </ul>
         </div>
@@ -97,16 +101,16 @@ export default function AsideTools() {
           <h3>Criptografia e Codificação</h3>
           <ul>
             <li>
-              <Link href="/ferramentas/${tool}">Código Morse</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Código Morse</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Código Binário</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Código Binário</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Código Hexadecimal</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Código Hexadecimal</Link>
             </li>
             <li>
-              <Link href="/ferramentas/${tool}">Criptografar Textos</Link>
+              <Link href={`/ferramentas/${"tool"}`}>Criptografar Textos</Link>
             </li>
           </ul>
         </div>

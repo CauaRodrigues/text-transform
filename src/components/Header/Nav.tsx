@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import MenuMobile from "./MenuMobile";
 
-export default function Menu() {
+import NavMobile from "./NavMobile";
+
+export default function Nav() {
   return (
     <nav className="header__nav">
       <Link href="/">
         <Image
-          src="/assets/logo.svg"
           alt="Text Transform Logo"
           className="nav__logo"
-          width={300}
           height={60}
+          src="/assets/logo.svg"
+          width={300}
         />
       </Link>
 
@@ -30,11 +31,11 @@ export default function Menu() {
         </li>
       </ul>
 
-      <button className="btn--support">
+      <button className="btn--support" id="no-mobile">
         <Link href="/">Apoiar</Link>
       </button>
 
-      <MenuMobile />
+      <NavMobile />
     </nav>
   );
 }
