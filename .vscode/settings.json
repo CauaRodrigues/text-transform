@@ -4,5 +4,8 @@
   "editor.formatOnSave": true,
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

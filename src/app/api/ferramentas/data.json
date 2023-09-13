@@ -1,0 +1,199 @@
+{
+  "tools": {
+    "categories": [
+      {
+        "id": 1,
+        "name": "Manipular Textos",
+        "list": [
+          {
+            "id": 1,
+            "urlName": "formatar-texto",
+            "title": "Formatação de Textos",
+            "description": "Formate textos rapidamente",
+            "functionsList": [
+              "Frase",
+              "Maiúsculo",
+              "Minúsculo",
+              "Capitalizado",
+              "Alternado",
+              "Inverter",
+              "Remover Espaços",
+              "Remover Caracteres Específicos"
+            ]
+          },
+          {
+            "id": 2,
+            "urlName": "censurar-texto",
+            "title": "Censurar Textos",
+            "description": "Censure palavras com um click",
+            "functionsList": [
+              "Substituir com caracteres especiais aleatórios",
+              "Substituir com caracteres específicos",
+              "Inserir lista de palavras para censurar",
+              "Usar lista pré-definida com palavras impróprias"
+            ]
+          },
+          {
+            "id": 3,
+            "urlName": "estilizar-texto",
+            "title": "Estilizar Textos",
+            "description": "Textos em letras personalizadas",
+            "functionsList": [
+              "Tachado",
+              "Reverter",
+              "De cabeça para baixo",
+              "Negrito",
+              "Itálico",
+              "Sublinhado",
+              "Bubble Text"
+            ]
+          },
+          {
+            "id": 4,
+            "urlName": "ordenar-listas",
+            "title": "Ordenar Listas",
+            "description": "Crie, personalize e ordene lista da forma que quiser",
+            "functionsList": [
+              "Emojis",
+              "Números Decimais",
+              "Números Romanos",
+              "Símbolos",
+              "Ordem Alfabética",
+              "Ordem Personalizada"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Análise de Texto",
+        "list": [
+          {
+            "id": 1,
+            "urlName": "localizar-palavras",
+            "title": "Localizar",
+            "description": "Procure por palavras repetidas e altere todas de uma vez",
+            "functionsList": ["Localizar e substituir", "Localizar e remover"]
+          },
+          {
+            "id": 2,
+            "urlName": "contador-caracteres",
+            "title": "Contador de Caracteres",
+            "description": "Veja com precisão quantos caracteres, linhas, palavras e muito mais existem no texto.",
+            "functionsList": [
+              "Palavaras",
+              "Linhas",
+              "Pontuação",
+              "Letras",
+              "Caracteres Especiais",
+              "Frases"
+            ]
+          },
+          {
+            "id": 3,
+            "urlName": "comparar-textos",
+            "title": "Comparar Textos",
+            "description": "Compare textos ou códigos e veja a diferença entre eles",
+            "functionsList": ["Identificar Diferenças", "Merge (Fundir textos)"]
+          },
+          {
+            "id": 4,
+            "urlName": "corretor-ortografico",
+            "title": "Corretor Ortográfico",
+            "description": "Detecta erros ortográficos e sugere correções",
+            "functionsList": [
+              "Verificação Ortográfica",
+              "Aplicar Correções",
+              "Sugerir Correções"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Geradores",
+        "list": [
+          {
+            "id": 1,
+            "urlName": "gerar-lorem-ispum",
+            "title": "Gerar Lorem Ispum",
+            "description": "Deseja testar uma nova interface ou design? Seja prático e utilize Lorem Ispum",
+            "functionsList": [
+              "Parágrafos",
+              "Palavras",
+              "Caracteres",
+              "Listas",
+              "Gerar em HTML",
+              "Gerar em Texto"
+            ]
+          },
+          {
+            "id": 2,
+            "urlName": "gerar-nomes",
+            "title": "Gerarador de Nomes Fictícios",
+            "description": "Gere nomes para testar suas aplicações ou criar personagens",
+            "functionsList": [
+              "Nomes Falsos",
+              "Personagens Fictícios",
+              "Nomes de usuários",
+              "RPG"
+            ]
+          },
+          {
+            "id": 3,
+            "urlName": "gerar-senhas",
+            "title": "Gerador de Senhas",
+            "description": "Gere e utilize senhas altamente seguros",
+            "functionsList": [
+              "Letras Alternadas",
+              "Números",
+              "Caracteres Especiais",
+              "Define o mínimo e máximo de caracteres"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Aleatório",
+        "list": [
+          {
+            "id": 1,
+            "urlName": "numeros-aleatorios",
+            "title": "Número Aleátorio",
+            "description": "Gere um ou mais números aletórios",
+            "functionsList": [
+              "Definir mínimo, máximo e dígitos",
+              "Apenas números pares ou ímpares",
+              "Números primos"
+            ]
+          },
+          {
+            "id": 2,
+            "urlName": "sorteio",
+            "title": "Sorteio",
+            "description": "Sorteie um vencedor",
+            "functionsList": ["Nomes", "Palavras", "Números"]
+          },
+          {
+            "id": 3,
+            "urlName": "simular-dados",
+            "title": "Simulador de Dados",
+            "description": "Jogue Dados",
+            "functionsList": ["Quantos dados quiser"]
+          },
+          {
+            "id": 4,
+            "urlName": "sortear-equipe",
+            "title": "Sorteie Equipes",
+            "description": "Crie equipes e grupos aleatórios a partir de uma lista de participantes.",
+            "functionsList": [
+              "Divida pela quantidade de equipes ou por participantes",
+              "Compartilhe o resultado"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

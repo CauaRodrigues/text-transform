@@ -1,6 +1,5 @@
-import { NextResponse } from "next/server";
-
 import RobotVerificationService from "@/services/VerifyRobots";
+import { NextResponse } from "next/server";
 
 const srv = new RobotVerificationService();
 
