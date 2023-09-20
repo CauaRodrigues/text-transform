@@ -1,6 +1,6 @@
+import AsideTools from "@/components/AsideTools";
 import Header from "@/components/Header";
 import SectionTools from "@/components/SectionTools";
-import AsideTools from "@/components/AsideTools";
 
 import "./page.scss";
 
@@ -16,7 +16,6 @@ export default function Tools() {
           <h1>As melhores ferramentas em um só lugar.</h1>
 
           <SectionTools
-            titleSection="Manipular Texto"
             data={[
               {
                 id: 1,
@@ -75,6 +74,7 @@ export default function Tools() {
                 ],
               },
             ]}
+            titleSection="Manipular Texto"
           />
 
           <SectionTools

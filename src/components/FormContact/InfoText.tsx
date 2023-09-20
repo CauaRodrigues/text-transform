@@ -24,7 +24,7 @@ export default function InfoText() {
           funcionalidades, fortacelendo cada vez mais o Text Transform.
         </p>
 
-        <Link href="/apoiar" className="btn--support">
+        <Link className="btn--support" href="/apoiar">
           Apoiar
         </Link>
       </div>

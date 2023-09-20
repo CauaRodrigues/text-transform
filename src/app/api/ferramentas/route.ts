@@ -5,5 +5,5 @@ import RawData from "./data.json";
 export async function GET() {
   const data = RawData;
 
-  return NextResponse.json({ data });
+  return NextResponse.json({ ...data });
 }

@@ -1,8 +1,7 @@
-import Image from "next/image";
-
-import Header from "@/components/Header";
 import ScrollIndicatorIcon from "@/assets/icons/utils/scroll-indicator.svg";
 import FormContact from "@/components/FormContact";
+import Header from "@/components/Header";
+import Image from "next/image";
 
 import "./page.scss";
 
@@ -27,20 +26,20 @@ export default function About() {
             </div>
 
             <Image
-              src="/assets/images/hero-about.jpg"
               alt="Pessoa digitando no notebook"
               className="hero__about--image"
-              width={718}
               height={478.67}
+              src="/assets/images/hero-about.jpg"
+              width={718}
             />
           </div>
 
           <Image
-            src={ScrollIndicatorIcon}
             alt="Scroll Indicator"
             className="scroll-indicator"
-            width={55}
             height={53}
+            src={ScrollIndicatorIcon}
+            width={55}
           />
         </section>
 

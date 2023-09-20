@@ -1,22 +1,31 @@
+"use client";
+
+import SearchIcon from "@/assets/icons/utils/magnify-gray.svg";
+import FetchToolsService from "@/services/FetchTools";
 import Image from "next/image";
 import Link from "next/link";
 
-import SearchIcon from "@/assets/icons/utils/magnify-gray.svg";
-
 import "./styles.scss";
 
+const srv = new FetchToolsService();
+
 export default function AsideTools() {
+  const sla = async () => {
+    const toolsName = await srv.listNamesAndCategories();
+    // console.log(toolsName.data);
+  };
+
   return (
     <aside className="menu__list--tools">
       <header className="field__search--tools">
         <input
-          type="text"
           id="searchTool"
           name="searchTool"
           placeholder="Procurar"
+          type="text"
         />
-        <button>
-          <Image src={SearchIcon} alt="pesquisar" width={27} height={27.02} />
+        <button onClick={sla}>
+          <Image alt="pesquisar" height={27.02} src={SearchIcon} width={27} />
         </button>
       </header>
 

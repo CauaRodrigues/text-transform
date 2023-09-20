@@ -1,11 +1,10 @@
 "use client";
 
+import RobotVerificationService from "@/services/VerifyRobots";
+import EmailTemplateParams from "@/utils/EmailTemplate";
+import emailjs from "@emailjs/browser";
 import React, { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import emailjs from "@emailjs/browser";
-
-import EmailTemplateParams from "@/utils/EmailTemplate";
-import RobotVerificationService from "@/services/VerifyRobots";
 
 const [SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY, SITE_KEY] = [
   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -19,22 +18,22 @@ const srv = new RobotVerificationService();
 export default function Fields() {
   const captchaRef = useRef<ReCAPTCHA>(null);
   const [alertMessage, setAlertMessage] = useState({
-    status: "",
     message: "",
+    status: "",
   });
 
   const [isFieldsFilled, setIsFieldsFilled] = useState(true);
   const [formData, setFormData] = useState({
-    topic: "",
-    name: "",
     email: "",
-    message: "",
     isHuman: false,
+    message: "",
+    name: "",
+    topic: "",
   });
 
   const handleChange = (
     event: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >,
   ) => {
     const { name, value } = event.target;
@@ -54,16 +53,16 @@ export default function Fields() {
       if (data.error) {
         captchaRef.current?.reset();
         setAlertMessage({
-          status: "error",
           message: data.error,
+          status: "error",
         });
       } else {
         setFormData((prevState) => {
           return { ...prevState, isHuman: data.isHuman };
         });
         setAlertMessage({
-          status: "",
           message: "",
+          status: "",
         });
       }
     });
@@ -77,16 +76,16 @@ export default function Fields() {
       (result) => {
         if (result.text === "OK") {
           setFormData({
-            name: "",
             email: "",
-            message: "",
-            topic: "",
             isHuman: false,
+            message: "",
+            name: "",
+            topic: "",
           });
 
           setAlertMessage({
-            status: "success",
             message: "Mensagem enviada com sucesso!",
+            status: "success",
           });
 
           captchaRef.current?.reset();
@@ -95,8 +94,8 @@ export default function Fields() {
       (error) => {
         if (error) {
           setAlertMessage({
-            status: "error",
             message: "Ocorreu um erro. Tente de novo mais tarde.",
+            status: "error",
           });
         }
       },
@@ -123,11 +122,11 @@ export default function Fields() {
         <select
           id="topic"
           name="topic"
-          value={formData.topic}
           onChange={handleChange}
           required
+          value={formData.topic}
         >
-          <option label="Qual o assunto?" value="" disabled />
+          <option disabled label="Qual o assunto?" value="" />
           <option label="Feedback" value="Feedback" />
           <option label="Sugestões" value="Sugestões" />
           <option label="Dúvidas" value="Dúvidas" />
@@ -142,52 +141,52 @@ export default function Fields() {
       <div className="field">
         <label htmlFor="name">Nome *</label>
         <input
-          type="text"
-          name="name"
           id="name"
-          placeholder="Seu Nome"
-          value={formData.name}
+          name="name"
           onChange={handleChange}
+          placeholder="Seu Nome"
           required
+          type="text"
+          value={formData.name}
         />
       </div>
 
       <div className="field">
         <label htmlFor="email">E-mail *</label>
         <input
-          type="email"
-          name="email"
           id="email"
-          placeholder="Seu Melhor E-mail"
-          value={formData.email}
+          name="email"
           onChange={handleChange}
+          placeholder="Seu Melhor E-mail"
           required
+          type="email"
+          value={formData.email}
         />
       </div>
 
       <div className="field">
         <label htmlFor="message">Mensagem *</label>
         <textarea
-          name="message"
-          id="message"
           placeholder={`Escrevra o que você pensando sobre "${
             formData.topic || "Tópico"
           }"`}
-          value={formData.message}
+          id="message"
+          name="message"
           onChange={handleChange}
           required
+          value={formData.message}
         />
       </div>
 
       <ReCAPTCHA
-        sitekey={SITE_KEY}
         onChange={verifyRobots}
         ref={captchaRef}
+        sitekey={SITE_KEY}
         size="normal"
         theme="light"
       />
 
-      <button type="submit" className="btn--send" disabled={isFieldsFilled}>
+      <button className="btn--send" disabled={isFieldsFilled} type="submit">
         Enviar
       </button>
     </form>
