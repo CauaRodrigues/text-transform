@@ -12,7 +12,7 @@ const srv = new FetchToolsService();
 export default function AsideTools() {
   const sla = async () => {
     const toolsName = await srv.listNamesAndCategories();
-    // console.log(toolsName.data);
+    console.log(toolsName.data);
   };
 
   return (
