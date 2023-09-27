@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.3rem;
-  align-items: baseline;
+  align-items: flex-start;
 
   @media (max-width: 1200px) {
     width: 90%;

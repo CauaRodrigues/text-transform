@@ -10,7 +10,7 @@ interface DataStatusType {
 
 const srv = new FetchToolsService();
 
-export default function useDataStatus(format: "list" | "card") {
+export default function useDataStatus() {
   const [dataStatus, setDataStatus] = useState<DataStatusType>({
     content: [],
     error: null,
@@ -20,13 +20,11 @@ export default function useDataStatus(format: "list" | "card") {
   useEffect(() => {
     const loadData = async () => {
       try {
-        if (format === "list") {
-          const { tools: response } = await srv.listNamesAndCategories();
-          setDataStatus((prevState) => ({
-            ...prevState,
-            content: response.categories,
-          }));
-        }
+        const { tools: response } = await srv.listNamesAndCategories();
+        setDataStatus((prevState) => ({
+          ...prevState,
+          content: response.categories,
+        }));
       } catch (err) {
         setDataStatus((prevState) => ({
           ...prevState,
@@ -41,7 +39,7 @@ export default function useDataStatus(format: "list" | "card") {
     };
 
     loadData();
-  }, [format]);
+  }, []);
 
   return { ...dataStatus };
 }

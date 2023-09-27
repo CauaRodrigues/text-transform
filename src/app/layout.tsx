@@ -1,6 +1,6 @@
 import { Poppins } from "next/font/google";
-import "@/styles/globals.scss";
 import Footer from "@/components/Footer";
+import "@/styles/globals.scss";
 
 const poppins = Poppins({
   display: "swap",

@@ -5,9 +5,4 @@ export default class FetchToolsService {
     const { data: res } = await InstanceAPI.get("/ferramentas");
     return res;
   }
-
-  async toolsList() {
-    const res = await InstanceAPI.get("/ferramentas");
-    return res.data;
-  }
 }
