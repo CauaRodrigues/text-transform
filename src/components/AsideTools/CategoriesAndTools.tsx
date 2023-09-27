@@ -11,6 +11,8 @@ export default function CategoriesAndTools() {
     <>
       {isLoading
         ? "Carregando..."
+        : error
+        ? "Opss... Um erro inesperado ocorreu."
         : content.map((category) => {
             return (
               <Fragment key={category.id}>
