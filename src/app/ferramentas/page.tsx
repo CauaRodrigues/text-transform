@@ -19,7 +19,7 @@ export default function Tools() {
             data={[
               {
                 id: 1,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -33,7 +33,7 @@ export default function Tools() {
               },
               {
                 id: 2,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -47,7 +47,7 @@ export default function Tools() {
               },
               {
                 id: 3,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -61,7 +61,7 @@ export default function Tools() {
               },
               {
                 id: 4,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -82,7 +82,7 @@ export default function Tools() {
             data={[
               {
                 id: 1,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -96,7 +96,7 @@ export default function Tools() {
               },
               {
                 id: 2,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -110,7 +110,7 @@ export default function Tools() {
               },
               {
                 id: 3,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -124,7 +124,7 @@ export default function Tools() {
               },
               {
                 id: 4,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -144,7 +144,7 @@ export default function Tools() {
             data={[
               {
                 id: 1,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -158,7 +158,7 @@ export default function Tools() {
               },
               {
                 id: 2,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -172,7 +172,7 @@ export default function Tools() {
               },
               {
                 id: 3,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -186,7 +186,7 @@ export default function Tools() {
               },
               {
                 id: 4,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -206,7 +206,7 @@ export default function Tools() {
             data={[
               {
                 id: 1,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -220,7 +220,7 @@ export default function Tools() {
               },
               {
                 id: 2,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -234,7 +234,7 @@ export default function Tools() {
               },
               {
                 id: 3,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -248,7 +248,7 @@ export default function Tools() {
               },
               {
                 id: 4,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -268,7 +268,7 @@ export default function Tools() {
             data={[
               {
                 id: 1,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -282,7 +282,7 @@ export default function Tools() {
               },
               {
                 id: 2,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -296,7 +296,7 @@ export default function Tools() {
               },
               {
                 id: 3,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
@@ -310,7 +310,7 @@ export default function Tools() {
               },
               {
                 id: 4,
-                name: "nome",
+                urlName: "nome",
                 title: "titulo",
                 description: "descrição, descrição e descrição",
                 functionsList: [
