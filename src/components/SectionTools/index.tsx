@@ -1,5 +1,7 @@
 import GalleryCard from "@/components/GalleryCard";
+
 import { ToolsType } from "@/types/ToolsType";
+
 import "./styles.scss";
 
 export default function SectionTools({

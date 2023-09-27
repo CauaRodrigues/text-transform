@@ -4,7 +4,7 @@
       {
         "id": 1,
         "name": "Manipular Textos",
-        "list": [
+        "tools": [
           {
             "id": 1,
             "urlName": "formatar-texto",
@@ -67,7 +67,7 @@
       {
         "id": 2,
         "name": "Análise de Texto",
-        "list": [
+        "tools": [
           {
             "id": 1,
             "urlName": "localizar-palavras",
@@ -112,7 +112,7 @@
       {
         "id": 3,
         "name": "Geradores",
-        "list": [
+        "tools": [
           {
             "id": 1,
             "urlName": "gerar-lorem-ispum",
@@ -156,7 +156,7 @@
       {
         "id": 4,
         "name": "Aleatório",
-        "list": [
+        "tools": [
           {
             "id": 1,
             "urlName": "numeros-aleatorios",
