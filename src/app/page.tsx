@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/Header";
 import SearchField from "@/components/SearchField";
-import SectionTools from "@/components/SectionTools";
+import RenderPopularTools from "./RenderPopularTools";
 import "./page.scss";
 
 export default function Home() {
@@ -35,95 +35,7 @@ export default function Home() {
 
       <main>
         <section className="container__popular-tools" id="container__info">
-          <SectionTools
-            titleSection="Ferramentas Populares"
-            data={[
-              {
-                id: 1,
-                urlName: "nome",
-                title: "titulo",
-                description: "descrição, descrição e descrição",
-                functionsList: [
-                  "test0",
-                  "test1",
-                  "test2",
-                  "test3",
-                  "test4",
-                  "test5",
-                ],
-              },
-              {
-                id: 2,
-                urlName: "nome",
-                title: "titulo",
-                description: "descrição, descrição e descrição",
-                functionsList: [
-                  "test0",
-                  "test1",
-                  "test2",
-                  "test3",
-                  "test4",
-                  "test5",
-                ],
-              },
-              {
-                id: 3,
-                urlName: "nome",
-                title: "titulo",
-                description: "descrição, descrição e descrição",
-                functionsList: [
-                  "test0",
-                  "test1",
-                  "test2",
-                  "test3",
-                  "test4",
-                  "test5",
-                ],
-              },
-              {
-                id: 4,
-                urlName: "nome",
-                title: "titulo",
-                description: "descrição, descrição e descrição",
-                functionsList: [
-                  "test0",
-                  "test1",
-                  "test2",
-                  "test3",
-                  "test4",
-                  "test5",
-                ],
-              },
-              {
-                id: 4,
-                urlName: "nome",
-                title: "titulo",
-                description: "descrição, descrição e descrição",
-                functionsList: [
-                  "test0",
-                  "test1",
-                  "test2",
-                  "test3",
-                  "test4",
-                  "test5",
-                ],
-              },
-              {
-                id: 4,
-                urlName: "nome",
-                title: "titulo",
-                description: "descrição, descrição e descrição",
-                functionsList: [
-                  "test0",
-                  "test1",
-                  "test2",
-                  "test3",
-                  "test4",
-                  "test5",
-                ],
-              },
-            ]}
-          />
+          <RenderPopularTools />
 
           <Link
             href="/ferramentas"

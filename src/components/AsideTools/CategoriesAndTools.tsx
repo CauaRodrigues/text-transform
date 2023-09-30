@@ -2,33 +2,35 @@
 
 import { Fragment } from "react";
 import Link from "next/link";
+
+import { SkeletonLoadingLine } from "../SkeletonLoadingAnimation";
 import useDataStatus from "@/hooks/useDataStatus";
 
 export default function CategoriesAndTools() {
-  const { content, error, isLoading } = useDataStatus();
+  const { content, isLoading } = useDataStatus();
 
   return (
     <>
-      {isLoading
-        ? "Carregando..."
-        : error
-        ? "Opss... Um erro inesperado ocorreu."
-        : content.map((category) => (
-            <Fragment key={category.id}>
-              <div className="box__category--tools">
-                <h3>{category.name}</h3>
-                <ul>
-                  {category.tools.map((tool) => (
-                    <li key={tool.id}>
-                      <Link href={`/ferramentas/${tool.urlName}`}>
-                        {tool.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Fragment>
-          ))}
+      {isLoading ? (
+        <SkeletonLoadingLine />
+      ) : (
+        content.map((category) => (
+          <Fragment key={category.id}>
+            <div className="box__category--tools">
+              <h3>{category.name}</h3>
+              <ul>
+                {category.tools.map((tool) => (
+                  <li key={tool.id}>
+                    <Link href={`/ferramentas/${tool.urlName}`}>
+                      {tool.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Fragment>
+        ))
+      )}
     </>
   );
 }
