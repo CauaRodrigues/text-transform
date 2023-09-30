@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import FetchToolsService from "@/services/FetchTools";
-import { CategoriesType } from "@/types/ToolsType";
+import { CategoriesType, ToolsType } from "@/types/ToolsType";
 
 interface DataStatusType {
-  content: CategoriesType[];
+  content: ToolsType[] & CategoriesType[];
   error: string | null;
   isLoading: boolean;
 }
 
 const srv = new FetchToolsService();
 
-export default function useDataStatus() {
+export default function useDataStatus(filter: "all" | "popular" = "all") {
   const [dataStatus, setDataStatus] = useState<DataStatusType>({
     content: [],
     error: null,
@@ -20,10 +20,19 @@ export default function useDataStatus() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const { tools: response } = await srv.listNamesAndCategories();
+        const tools = async () => {
+          if (filter === "all") {
+            return await srv.listNamesAndCategories();
+          } else {
+            return await srv.listPopularTools();
+          }
+        };
+
+        const response = await tools();
+
         setDataStatus((prevState) => ({
           ...prevState,
-          content: response.categories,
+          content: filter === "all" ? response.tools.categories : response,
         }));
       } catch (err) {
         setDataStatus((prevState) => ({
@@ -39,7 +48,7 @@ export default function useDataStatus() {
     };
 
     loadData();
-  }, []);
+  }, [filter]);
 
   return { ...dataStatus };
 }
