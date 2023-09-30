@@ -1,0 +1,18 @@
+.skeleton-loading__container--line {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+}
+
+.skeleton__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .skeleton-loading__title {
+    width: 40%;
+    margin-bottom: 80px;
+  }
+}

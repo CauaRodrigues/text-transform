@@ -1,5 +1,9 @@
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer";
+
+import { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 import "@/styles/globals.scss";
 
 const poppins = Poppins({
@@ -24,7 +28,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={poppins.className}>
-        {children} <Footer />
+        <SkeletonTheme baseColor="#ffc9c1df" highlightColor="#f86a5460">
+          {children}
+        </SkeletonTheme>
+        <Footer />
       </body>
     </html>
   );
