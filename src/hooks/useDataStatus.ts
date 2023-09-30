@@ -3,7 +3,7 @@ import FetchToolsService from "@/services/FetchTools";
 import { CategoriesType, ToolsType } from "@/types/ToolsType";
 
 interface DataStatusType {
-  content: ToolsType[] & CategoriesType[];
+  content: CategoriesType[] & ToolsType[];
   error: string | null;
   isLoading: boolean;
 }
