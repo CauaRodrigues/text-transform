@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import FacebookIcon from "@/assets/icons/socialMedia/facebook.svg";
 import TwitterIcon from "@/assets/icons/socialMedia/twitter.svg";
@@ -9,11 +10,11 @@ import HeartIcon from "@/assets/icons/heart.svg";
 import CoffeeIcon from "@/assets/icons/coffee.svg";
 
 import "./styles.scss";
-import Link from "next/link";
 
 export default function Footer() {
   const ICON_WIDTH = 26;
   const ICON_HEIGHT = 42;
+  const URL_SITE = "texttransform.vercel.app";
 
   const CurrentYear = new Date().getFullYear();
 
@@ -39,27 +40,48 @@ export default function Footer() {
             <h3>Compartilhe com seus amigos</h3>
 
             <div className="social-media--icons">
-              <Image
-                src={FacebookIcon}
-                alt="Facebook"
-                className="icon"
-                width={ICON_WIDTH}
-                height={ICON_HEIGHT}
-              />
-              <Image
-                src={TwitterIcon}
-                alt="Compartilhar no Twitter"
-                className="icon"
-                width={ICON_WIDTH}
-                height={ICON_HEIGHT}
-              />
-              <Image
-                src={LinkedInIcon}
-                alt="LinkedIn"
-                className="icon"
-                width={ICON_WIDTH}
-                height={ICON_HEIGHT}
-              />
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href={`https://www.facebook.com/sharer/sharer.php?u=${URL_SITE}`}
+              >
+                <Image
+                  src={FacebookIcon}
+                  alt="Facebook"
+                  className="icon"
+                  width={ICON_WIDTH}
+                  height={ICON_HEIGHT}
+                />
+              </a>
+
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href={`https://twitter.com/intent/tweet?url=${URL_SITE}&text=Venha+conhecer+o+arsenal+para+quem+produz+conteúdo+online&hashtags=producaodeconteudo,copywriters,desenvolvedores,marketing`}
+              >
+                <Image
+                  src={TwitterIcon}
+                  alt="Compartilhar no Twitter"
+                  className="icon"
+                  width={ICON_WIDTH}
+                  height={ICON_HEIGHT}
+                />
+              </a>
+
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href={`https://www.linkedin.com/shareArticle?mini=true&url=${URL_SITE}&title=Text+Transform&summary=[RESUMO]&source=[NOME-DA-FONTE]`}
+              >
+                <Image
+                  src={LinkedInIcon}
+                  alt="LinkedIn"
+                  className="icon"
+                  width={ICON_WIDTH}
+                  height={ICON_HEIGHT}
+                />
+              </a>
+
               <Image
                 src={CopyLinkIcon}
                 alt="Copiar Link"
@@ -119,34 +141,42 @@ export default function Footer() {
 
           <ul>
             <li>
-              <Link href="/ferramentas">formatação de textos</Link>
+              <Link href="/ferramentas/formatar-texto">
+                formatação de textos
+              </Link>
             </li>
             <li>
-              <Link href="/ferramentas">personalizar textos</Link>
+              <Link href="/ferramentas/estilizar-texto">
+                personalizar textos
+              </Link>
             </li>
             <li>
-              <Link href="/ferramentas">criação de listas</Link>
+              <Link href="/ferramentas/ordenar-listas">ordenar listas</Link>
             </li>
             <li>
-              <Link href="/ferramentas">texto para código morse</Link>
+              <Link href="/ferramentas/corretor-ortografico">
+                Corretor ortográfico
+              </Link>
             </li>
             <li>
-              <Link href="/ferramentas">texto para binário</Link>
+              <Link href="/ferramentas/comparar-textos">comparar textos</Link>
             </li>
             <li>
-              <Link href="/ferramentas">gerador de lorem ispum</Link>
+              <Link href="/ferramentas/gerar-lorem-ispum">
+                gerador de lorem ispum
+              </Link>
             </li>
             <li>
-              <Link href="/ferramentas">gerador de nomes</Link>
+              <Link href="/ferramentas/gerar-nomes">gerador de nomes</Link>
             </li>
             <li>
-              <Link href="/ferramentas">gerador de senhas</Link>
+              <Link href="/ferramentas/gerar-senhas">gerador de senhas</Link>
             </li>
             <li>
-              <Link href="/ferramentas">sortear nomes</Link>
+              <Link href="/ferramentas/sorteio">sortear nomes</Link>
             </li>
             <li>
-              <Link href="/ferramentas">jogar dados</Link>
+              <Link href="/ferramentas/simular-dados">jogar dados</Link>
             </li>
           </ul>
         </section>
@@ -184,8 +214,9 @@ export default function Footer() {
                 href="mailto:assis.developer@gmail.com"
                 rel="noopener noreferrer"
                 target="_blank"
+                className="no-capitalize"
               >
-                dev.akamatu@gmail.com
+                assis.developer@gmail.com
               </a>
             </li>
           </ul>

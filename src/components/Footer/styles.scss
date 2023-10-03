@@ -67,6 +67,10 @@ footer {
           fonts.$wg-medium
         );
 
+        &.no-capitalize {
+          text-transform: lowercase;
+        }
+
         &:hover {
           color: colors.$gray-200;
           text-decoration: none;
