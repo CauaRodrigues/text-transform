@@ -16,6 +16,7 @@ export default function ShareButton() {
           url: process.env.NEXT_PUBLIC_BASE_URL,
         });
       }}
+      title="Compartilhar"
     >
       <Image
         src={ButtonsIcons.share}
