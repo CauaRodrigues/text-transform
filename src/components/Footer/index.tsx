@@ -4,17 +4,19 @@ import Link from "next/link";
 import FacebookIcon from "@/assets/icons/socialMedia/facebook.svg";
 import TwitterIcon from "@/assets/icons/socialMedia/twitter.svg";
 import LinkedInIcon from "@/assets/icons/socialMedia/linkedin.svg";
-import CopyLinkIcon from "@/assets/icons/utils/link.svg";
 import OthersIcon from "@/assets/icons/utils/others.svg";
 import HeartIcon from "@/assets/icons/heart.svg";
 import CoffeeIcon from "@/assets/icons/coffee.svg";
 
+import { CopyButton } from "../Buttons";
+
 import "./styles.scss";
+
+const URL_SITE = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function Footer() {
   const ICON_WIDTH = 26;
   const ICON_HEIGHT = 42;
-  const URL_SITE = "texttransform.vercel.app";
 
   const CurrentYear = new Date().getFullYear();
 
@@ -57,7 +59,7 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href={`https://twitter.com/intent/tweet?url=${URL_SITE}&text=Venha+conhecer+o+arsenal+para+quem+produz+conteúdo+online&hashtags=producaodeconteudo,copywriters,desenvolvedores,marketing`}
+                href={`https://twitter.com/intent/tweet?url=${URL_SITE}`}
               >
                 <Image
                   src={TwitterIcon}
@@ -82,13 +84,8 @@ export default function Footer() {
                 />
               </a>
 
-              <Image
-                src={CopyLinkIcon}
-                alt="Copiar Link"
-                className="icon"
-                width={ICON_WIDTH}
-                height={ICON_HEIGHT}
-              />
+              <CopyButton contentToCopy={URL_SITE} />
+
               <Image
                 src={OthersIcon}
                 alt="Outras Opções"

@@ -1,7 +1,7 @@
 "use client";
 
 import RobotVerificationService from "@/services/VerifyRobots";
-import EmailTemplateParams from "@/utils/EmailTemplate";
+import EmailTemplateParams from "@/templates/EmailTemplate";
 import emailjs from "@emailjs/browser";
 import React, { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
