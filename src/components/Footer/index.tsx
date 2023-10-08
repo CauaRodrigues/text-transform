@@ -4,11 +4,10 @@ import Link from "next/link";
 import FacebookIcon from "@/assets/icons/socialMedia/facebook.svg";
 import TwitterIcon from "@/assets/icons/socialMedia/twitter.svg";
 import LinkedInIcon from "@/assets/icons/socialMedia/linkedin.svg";
-import OthersIcon from "@/assets/icons/utils/others.svg";
 import HeartIcon from "@/assets/icons/heart.svg";
 import CoffeeIcon from "@/assets/icons/coffee.svg";
 
-import { CopyButton } from "../Buttons";
+import { CopyButton, ShareButton } from "../Buttons";
 
 import "./styles.scss";
 
@@ -86,13 +85,7 @@ export default function Footer() {
 
               <CopyButton contentToCopy={URL_SITE} />
 
-              <Image
-                src={OthersIcon}
-                alt="Outras Opções"
-                className="icon"
-                width={ICON_WIDTH}
-                height={ICON_HEIGHT}
-              />
+              <ShareButton />
             </div>
           </div>
 

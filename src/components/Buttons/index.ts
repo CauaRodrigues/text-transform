@@ -1,3 +1,4 @@
 import CopyButton from "./CopyButton";
+import ShareButton from "./ShareButton";
 
-export { CopyButton };
+export { CopyButton, ShareButton };
