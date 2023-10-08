@@ -13,7 +13,10 @@ export default function CopyButton({
   contentToCopy: string;
 }) {
   return (
-    <button onClick={() => CopyToClipboard(contentToCopy)}>
+    <button
+      onClick={() => CopyToClipboard(contentToCopy)}
+      title="Copiar para área de transferência"
+    >
       <Image
         src={CopyLinkIcon}
         alt="Copiar Link"
