@@ -1,13 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import FacebookIcon from "@/assets/icons/socialMedia/facebook.svg";
-import TwitterIcon from "@/assets/icons/socialMedia/twitter.svg";
-import LinkedInIcon from "@/assets/icons/socialMedia/linkedin.svg";
-import HeartIcon from "@/assets/icons/heart.svg";
-import CoffeeIcon from "@/assets/icons/coffee.svg";
-
-import { CopyButton, ShareButton } from "../Buttons";
+import { SocialIcons, SymbolsIcons } from "@/shared/Icons";
+import { CopyButton, ShareButton } from "@/shared/Buttons";
 
 import "./styles.scss";
 
@@ -47,7 +42,7 @@ export default function Footer() {
                 href={`https://www.facebook.com/sharer/sharer.php?u=${URL_SITE}`}
               >
                 <Image
-                  src={FacebookIcon}
+                  src={SocialIcons.facebook}
                   alt="Facebook"
                   className="icon"
                   width={ICON_WIDTH}
@@ -61,7 +56,7 @@ export default function Footer() {
                 href={`https://twitter.com/intent/tweet?url=${URL_SITE}`}
               >
                 <Image
-                  src={TwitterIcon}
+                  src={SocialIcons.twitter}
                   alt="Compartilhar no Twitter"
                   className="icon"
                   width={ICON_WIDTH}
@@ -72,10 +67,10 @@ export default function Footer() {
               <a
                 rel="noreferrer"
                 target="_blank"
-                href={`https://www.linkedin.com/shareArticle?mini=true&url=${URL_SITE}&title=Text+Transform&summary=[RESUMO]&source=[NOME-DA-FONTE]`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${URL_SITE}`}
               >
                 <Image
-                  src={LinkedInIcon}
+                  src={SocialIcons.linkedin}
                   alt="LinkedIn"
                   className="icon"
                   width={ICON_WIDTH}
@@ -91,7 +86,7 @@ export default function Footer() {
 
           <button className="btn--support" id="btn__icon">
             <Image
-              src={HeartIcon}
+              src={SymbolsIcons.heart}
               alt="heart icon"
               className="icon"
               width={23}
@@ -222,7 +217,7 @@ export default function Footer() {
         <span className="message-to-users">
           Feito com{" "}
           <Image
-            src={HeartIcon}
+            src={SymbolsIcons.heart}
             alt="heart icon"
             className="icon"
             width={20.71}
@@ -230,7 +225,7 @@ export default function Footer() {
           />{" "}
           e{" "}
           <Image
-            src={CoffeeIcon}
+            src={SymbolsIcons.coffee}
             alt="coffee icon"
             className="icon"
             width={18.98}

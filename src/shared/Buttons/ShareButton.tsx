@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import OthersIcon from "@/assets/icons/utils/others.svg";
+import { ButtonsIcons } from "../Icons";
 
 const ICON_WIDTH = 26;
 const ICON_HEIGHT = 42;
@@ -18,8 +18,8 @@ export default function ShareButton() {
       }}
     >
       <Image
-        src={OthersIcon}
-        alt="Outras Opções"
+        src={ButtonsIcons.share}
+        alt="Compartilhar"
         className="icon"
         width={ICON_WIDTH}
         height={ICON_HEIGHT}
