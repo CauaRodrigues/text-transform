@@ -13,7 +13,9 @@ export default function SearchField() {
         autoComplete="off"
       />
 
-      <Image src={IconSearch} alt="Buscar" />
+      <button>
+        <Image src={IconSearch} alt="Buscar" title="Buscar" />
+      </button>
     </div>
   );
 }

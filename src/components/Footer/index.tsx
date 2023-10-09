@@ -3,15 +3,13 @@ import Link from "next/link";
 
 import { SocialIcons, SymbolsIcons } from "@/shared/Icons";
 import { CopyButton, ShareButton } from "@/shared/Buttons";
+import { IconSizes } from "@/shared/Icons/Sizes";
 
 import "./styles.scss";
 
 const URL_SITE = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function Footer() {
-  const ICON_WIDTH = 26;
-  const ICON_HEIGHT = 42;
-
   const CurrentYear = new Date().getFullYear();
 
   return (
@@ -45,8 +43,8 @@ export default function Footer() {
                   src={SocialIcons.facebook}
                   alt="Facebook"
                   className="icon"
-                  width={ICON_WIDTH}
-                  height={ICON_HEIGHT}
+                  width={IconSizes.large.width}
+                  height={IconSizes.large.height}
                 />
               </a>
 
@@ -59,8 +57,8 @@ export default function Footer() {
                   src={SocialIcons.twitter}
                   alt="Compartilhar no Twitter"
                   className="icon"
-                  width={ICON_WIDTH}
-                  height={ICON_HEIGHT}
+                  width={IconSizes.large.width}
+                  height={IconSizes.large.height}
                 />
               </a>
 
@@ -73,8 +71,8 @@ export default function Footer() {
                   src={SocialIcons.linkedin}
                   alt="LinkedIn"
                   className="icon"
-                  width={ICON_WIDTH}
-                  height={ICON_HEIGHT}
+                  width={IconSizes.large.width}
+                  height={IconSizes.large.height}
                 />
               </a>
 
@@ -220,16 +218,16 @@ export default function Footer() {
             src={SymbolsIcons.heart}
             alt="heart icon"
             className="icon"
-            width={20.71}
-            height={19}
+            width={IconSizes.small.width}
+            height={IconSizes.small.width}
           />{" "}
           e{" "}
           <Image
             src={SymbolsIcons.coffee}
             alt="coffee icon"
             className="icon"
-            width={18.98}
-            height={19}
+            width={IconSizes.small.width}
+            height={IconSizes.small.height}
           />
         </span>
       </div>
