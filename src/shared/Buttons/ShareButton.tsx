@@ -4,12 +4,16 @@ import Image from "next/image";
 
 import { ButtonsIcons } from "../Icons";
 import { IconSizes } from "../Icons/Sizes";
+import { useEffect, useState } from "react";
 
 export default function ShareButton() {
-  const isAllowedToShare = Object.prototype.hasOwnProperty.call(
-    navigator,
-    "share",
-  );
+  const [isAllowedToShare, setIsAllowedToShare] = useState(false);
+
+  useEffect(() => {
+    setIsAllowedToShare(
+      Object.prototype.hasOwnProperty.call(navigator, "share"),
+    );
+  }, []);
 
   const dataToShare = {
     title: "Text Transform",

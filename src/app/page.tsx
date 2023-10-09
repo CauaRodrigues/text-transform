@@ -1,7 +1,9 @@
 import Link from "next/link";
+
 import Header from "@/components/Header";
 import SearchField from "@/components/SearchField";
 import RenderPopularTools from "./RenderPopularTools";
+
 import "./page.scss";
 
 export default function Home() {
@@ -15,7 +17,7 @@ export default function Home() {
             inteligentes e práticas.
           </p>
 
-          <SearchField />
+          <SearchField styleType="box" />
 
           <div className="btn__group">
             <Link

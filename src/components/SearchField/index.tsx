@@ -1,20 +1,25 @@
 import Image from "next/image";
-import IconSearch from "@/assets/icons/utils/magnify-black.svg";
+
+import { ButtonsIcons } from "@/shared/Icons";
+
 import "./styles.scss";
 
-export default function SearchField() {
+export default function SearchField({
+  styleType,
+}: {
+  styleType: "integrated" | "box";
+}) {
   return (
-    <div className="field--tools-search">
+    <div className={`field__search-tools--${styleType}`}>
       <input
         type="text"
-        name="search"
-        id="search"
-        placeholder="Encontre a ferramenta perfeita aqui!"
-        autoComplete="off"
+        id="searchTool"
+        name="searchTool"
+        placeholder="Buscar ferramentas"
       />
 
       <button>
-        <Image src={IconSearch} alt="Buscar" title="Buscar" />
+        <Image src={ButtonsIcons.magnifyBlack} alt="Buscar" title="Buscar" />
       </button>
     </div>
   );
