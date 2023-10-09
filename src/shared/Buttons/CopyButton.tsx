@@ -3,9 +3,7 @@
 import Image from "next/image";
 import CopyLinkIcon from "@/assets/icons/utils/link.svg";
 import CopyToClipboard from "@/utils/CopyToClipboard";
-
-const ICON_WIDTH = 26;
-const ICON_HEIGHT = 42;
+import { IconSizes } from "../Icons/Sizes";
 
 export default function CopyButton({
   contentToCopy,
@@ -21,8 +19,8 @@ export default function CopyButton({
         src={CopyLinkIcon}
         alt="Copiar Link"
         className="icon"
-        width={ICON_WIDTH}
-        height={ICON_HEIGHT}
+        width={IconSizes.large.width}
+        height={IconSizes.large.height}
       />
     </button>
   );
