@@ -16,7 +16,7 @@ export default function AsideTools() {
           type="text"
         />
         <button>
-          <Image alt="pesquisar" height={27.02} src={SearchIcon} width={27} />
+          <Image src={SearchIcon} alt="pesquisar" title="Pesquisar" />
         </button>
       </header>
 
