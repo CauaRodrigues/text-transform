@@ -1,7 +1,7 @@
 {
   "popularTools": [
     {
-      "id": 1,
+      "id": "325fd8f6-d76d-4eab-9865-38f6e6fbd424",
       "urlName": "formatar-texto",
       "title": "Formatação de Textos",
       "description": "Formate textos rapidamente",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "b1e77221-250e-41bf-8027-00d056906f1d",
       "urlName": "censurar-texto",
       "title": "Censurar Textos",
       "description": "Censure palavras com um click",
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "cd4bfc2e-9b7d-458b-a4da-9f05faf99c86",
       "urlName": "corretor-ortografico",
       "title": "Corretor Ortográfico",
       "description": "Detecta erros ortográficos e sugere correções",
@@ -40,14 +40,14 @@
       ]
     },
     {
-      "id": 4,
+      "id": "41ff4057-ce34-4229-9cd4-278146f3e1e4",
       "urlName": "sorteio",
       "title": "Sorteio",
       "description": "Sorteie um vencedor",
       "functionsList": ["Nomes", "Palavras", "Números"]
     },
     {
-      "id": 5,
+      "id": "5c48e354-be39-4e75-b7c8-f022b1a62c43",
       "urlName": "gerar-senhas",
       "title": "Gerador de Senhas",
       "description": "Gere e utilize senhas altamente seguros",
@@ -59,7 +59,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "49182b6a-1903-488d-9428-e09d35ac1d99",
       "urlName": "gerar-lorem-ispum",
       "title": "Gerar Lorem Ispum",
       "description": "Deseja testar uma nova interface ou design? Seja prático e utilize Lorem Ispum",

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import React from "react";
 
 import { ButtonsIcons } from "@/shared/Icons";
 
@@ -6,9 +9,17 @@ import "./styles.scss";
 
 export default function SearchField({
   styleType,
+  search,
+  text,
 }: {
   styleType: "integrated" | "box";
+  search: (textFromField: string) => void;
+  text: string;
 }) {
+  const handlerSearchText = (event: React.ChangeEvent<HTMLInputElement>) => {
+    search(event.currentTarget.value);
+  };
+
   return (
     <div className={`field__search-tools--${styleType}`}>
       <input
@@ -16,6 +27,8 @@ export default function SearchField({
         id="searchTool"
         name="searchTool"
         placeholder="Buscar ferramentas"
+        value={text}
+        onChange={handlerSearchText}
       />
 
       <button>
