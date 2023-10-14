@@ -27,6 +27,7 @@ export default function SearchField({
         id="searchTool"
         name="searchTool"
         placeholder="Buscar ferramentas"
+        autoComplete="off"
         value={text}
         onChange={handlerSearchText}
       />
