@@ -3,8 +3,8 @@
 import Link from "next/link";
 
 import useDataStatus from "@/hooks/useDataStatus";
-import { SkeletonLoadingLine } from "../SkeletonLoadingAnimation";
 import { CategoriesType } from "@/types/ToolsType";
+import { SkeletonLoadingLine } from "../SkeletonLoadingAnimation";
 
 export default function CategoriesAndTools({
   fetchTool,
