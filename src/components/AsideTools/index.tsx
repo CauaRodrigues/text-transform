@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import SearchField from "../SearchField";
+import { SearchField } from "@/components/Search";
 import CategoriesAndTools from "./CategoriesAndTools";
 
 import "./styles.scss";
@@ -16,11 +16,7 @@ export default function AsideTools() {
 
   return (
     <aside className="menu__list--tools">
-      <SearchField
-        styleType="integrated"
-        search={getSearchText}
-        text={searchText}
-      />
+      <SearchField styleType="integrated" search={getSearchText} />
 
       <section>
         <CategoriesAndTools fetchTool={searchText} />

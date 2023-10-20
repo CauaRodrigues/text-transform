@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Header from "@/components/Header";
-import SearchFieldWithSuggestions from "@/components/SearchFieldWithSuggestions";
+import { SearchFieldWithSuggestions } from "@/components/Search";
 import RenderPopularTools from "./RenderPopularTools";
 
 import "./page.scss";

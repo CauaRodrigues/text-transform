@@ -17,6 +17,7 @@ export default function SearchField({
 }) {
   const [fieldValue, setFieldValue] = useState("");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedSave = useCallback(
     debounce((nextValue: string) => search(nextValue), 1000),
     [],

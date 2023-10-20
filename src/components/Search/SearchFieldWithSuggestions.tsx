@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 import useDataStatus from "@/hooks/useDataStatus";
-import SearchField from "@/components/SearchField";
 import { CategoriesType } from "@/types/ToolsType";
+import SearchField from "./SearchField";
 
 import "./styles.scss";
 
