@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useCallback, useState } from "react";
+import debounce from "lodash.debounce";
 
 import { ButtonsIcons } from "@/shared/Icons";
 
@@ -10,14 +11,21 @@ import "./styles.scss";
 export default function SearchField({
   styleType,
   search,
-  text,
 }: {
   styleType: "integrated" | "box";
   search: (textFromField: string) => void;
-  text: string;
 }) {
+  const [fieldValue, setFieldValue] = useState("");
+
+  const debouncedSave = useCallback(
+    debounce((nextValue: string) => search(nextValue), 1000),
+    [],
+  );
+
   const handlerSearchText = (event: React.ChangeEvent<HTMLInputElement>) => {
-    search(event.currentTarget.value);
+    const { value: nextValue } = event.target;
+    setFieldValue(nextValue);
+    debouncedSave(nextValue);
   };
 
   return (
@@ -28,7 +36,7 @@ export default function SearchField({
         name="searchTool"
         placeholder="Buscar ferramentas"
         autoComplete="off"
-        value={text}
+        value={fieldValue}
         onChange={handlerSearchText}
       />
 

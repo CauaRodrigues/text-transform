@@ -18,19 +18,21 @@ export default function SearchFieldWithSuggestions() {
   };
 
   const filteredTools = (obj: CategoriesType) =>
-    obj.tools.filter(
-      (tool) =>
-        tool.urlName.toLowerCase().includes(searchFieldValue.toLowerCase()) ||
-        tool.title.toLowerCase().includes(searchFieldValue.toLowerCase()),
-    );
+    obj.tools.filter((tool) => {
+      const filterByUrlName = tool.urlName
+        .toLowerCase()
+        .includes(searchFieldValue.toLowerCase());
+
+      const filterByTitle = tool.title
+        .toLowerCase()
+        .includes(searchFieldValue.toLowerCase());
+
+      return filterByTitle || filterByUrlName;
+    });
 
   return (
     <div className="container__search-field--with-suggest">
-      <SearchField
-        styleType="box"
-        search={getSearchFieldValue}
-        text={searchFieldValue}
-      />
+      <SearchField styleType="box" search={getSearchFieldValue} />
 
       {searchFieldValue.trim() ? (
         <ul>
