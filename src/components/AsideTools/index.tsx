@@ -1,27 +1,25 @@
-import Image from "next/image";
+"use client";
 
-import SearchIcon from "@/assets/icons/utils/magnify-gray.svg";
+import { useState } from "react";
 
+import { SearchField } from "@/components/Search";
 import CategoriesAndTools from "./CategoriesAndTools";
+
 import "./styles.scss";
 
 export default function AsideTools() {
+  const [searchText, setSearchText] = useState("");
+
+  const getSearchText = (textFromField: string) => {
+    setSearchText(textFromField);
+  };
+
   return (
     <aside className="menu__list--tools">
-      <header className="field__search--tools">
-        <input
-          id="searchTool"
-          name="searchTool"
-          placeholder="Procurar"
-          type="text"
-        />
-        <button>
-          <Image src={SearchIcon} alt="pesquisar" title="Pesquisar" />
-        </button>
-      </header>
+      <SearchField styleType="integrated" search={getSearchText} />
 
       <section>
-        <CategoriesAndTools />
+        <CategoriesAndTools fetchTool={searchText} />
       </section>
     </aside>
   );

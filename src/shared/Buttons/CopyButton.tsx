@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import CopyLinkIcon from "@/assets/icons/utils/link.svg";
+
 import CopyToClipboard from "@/utils/CopyToClipboard";
 
-const ICON_WIDTH = 26;
-const ICON_HEIGHT = 42;
+import { ButtonsIcons } from "../Icons";
+import { IconSizes } from "../Icons/Sizes";
 
 export default function CopyButton({
   contentToCopy,
@@ -18,11 +18,11 @@ export default function CopyButton({
       title="Copiar para área de transferência"
     >
       <Image
-        src={CopyLinkIcon}
+        src={ButtonsIcons.copy}
         alt="Copiar Link"
         className="icon"
-        width={ICON_WIDTH}
-        height={ICON_HEIGHT}
+        width={IconSizes.large.width}
+        height={IconSizes.large.height}
       />
     </button>
   );

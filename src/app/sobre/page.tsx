@@ -1,7 +1,9 @@
-import ScrollIndicatorIcon from "@/assets/icons/utils/scroll-indicator.svg";
+import Image from "next/image";
+
 import FormContact from "@/components/FormContact";
 import Header from "@/components/Header";
-import Image from "next/image";
+
+import { ButtonsIcons } from "@/shared/Icons";
 
 import "./page.scss";
 
@@ -38,7 +40,7 @@ export default function About() {
             alt="Scroll Indicator"
             className="scroll-indicator"
             height={53}
-            src={ScrollIndicatorIcon}
+            src={ButtonsIcons.scrollIndicator}
             width={55}
           />
         </section>

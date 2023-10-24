@@ -7,6 +7,8 @@ import coffee from "@/assets/icons/coffee.svg";
 
 import share from "@/assets/icons/utils/share.svg";
 import copy from "@/assets/icons/utils/link.svg";
+import magnifyBlack from "@/assets/icons/utils/magnify-black.svg";
+import scrollIndicator from "@/assets/icons/utils/scroll-indicator.svg";
 
 export const SocialIcons = {
   facebook,
@@ -22,4 +24,6 @@ export const SymbolsIcons = {
 export const ButtonsIcons = {
   share,
   copy,
+  magnifyBlack,
+  scrollIndicator,
 };

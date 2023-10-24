@@ -6,7 +6,7 @@
         "name": "Manipular Textos",
         "tools": [
           {
-            "id": 1,
+            "id": "325fd8f6-d76d-4eab-9865-38f6e6fbd424",
             "urlName": "formatar-texto",
             "title": "Formatação de Textos",
             "description": "Formate textos rapidamente",
@@ -22,7 +22,7 @@
             ]
           },
           {
-            "id": 2,
+            "id": "b1e77221-250e-41bf-8027-00d056906f1d",
             "urlName": "censurar-texto",
             "title": "Censurar Textos",
             "description": "Censure palavras com um click",
@@ -34,7 +34,7 @@
             ]
           },
           {
-            "id": 3,
+            "id": "fa6b774f-6e72-4dbb-ab01-c26650808948",
             "urlName": "estilizar-texto",
             "title": "Estilizar Textos",
             "description": "Textos em letras personalizadas",
@@ -49,7 +49,7 @@
             ]
           },
           {
-            "id": 4,
+            "id": "6874bd22-0415-4a5a-b3b0-7a84c037e06e",
             "urlName": "ordenar-listas",
             "title": "Ordenar Listas",
             "description": "Crie, personalize e ordene lista da forma que quiser",
@@ -69,14 +69,14 @@
         "name": "Análise de Texto",
         "tools": [
           {
-            "id": 1,
+            "id": "67ab776d-f8dd-4247-838b-a02985d42217",
             "urlName": "localizar-palavras",
             "title": "Localizar",
             "description": "Procure por palavras repetidas e altere todas de uma vez",
             "functionsList": ["Localizar e substituir", "Localizar e remover"]
           },
           {
-            "id": 2,
+            "id": "6c98ca41-29ed-4ceb-9c3c-19960ba1a052",
             "urlName": "contador-caracteres",
             "title": "Contador de Caracteres",
             "description": "Veja com precisão quantos caracteres, linhas, palavras e muito mais existem no texto.",
@@ -90,14 +90,14 @@
             ]
           },
           {
-            "id": 3,
+            "id": "ce956535-2f78-4ddf-9837-9da4799b545f",
             "urlName": "comparar-textos",
             "title": "Comparar Textos",
             "description": "Compare textos ou códigos e veja a diferença entre eles",
             "functionsList": ["Identificar Diferenças", "Merge (Fundir textos)"]
           },
           {
-            "id": 4,
+            "id": "cd4bfc2e-9b7d-458b-a4da-9f05faf99c86",
             "urlName": "corretor-ortografico",
             "title": "Corretor Ortográfico",
             "description": "Detecta erros ortográficos e sugere correções",
@@ -114,7 +114,7 @@
         "name": "Geradores",
         "tools": [
           {
-            "id": 1,
+            "id": "49182b6a-1903-488d-9428-e09d35ac1d99",
             "urlName": "gerar-lorem-ispum",
             "title": "Gerar Lorem Ispum",
             "description": "Deseja testar uma nova interface ou design? Seja prático e utilize Lorem Ispum",
@@ -128,7 +128,7 @@
             ]
           },
           {
-            "id": 2,
+            "id": "3912934b-7913-48aa-aa99-a40c4adcab15",
             "urlName": "gerar-nomes",
             "title": "Gerarador de Nomes Fictícios",
             "description": "Gere nomes para testar suas aplicações ou criar personagens",
@@ -140,7 +140,7 @@
             ]
           },
           {
-            "id": 3,
+            "id": "5c48e354-be39-4e75-b7c8-f022b1a62c43",
             "urlName": "gerar-senhas",
             "title": "Gerador de Senhas",
             "description": "Gere e utilize senhas altamente seguros",
@@ -158,7 +158,7 @@
         "name": "Aleatório",
         "tools": [
           {
-            "id": 1,
+            "id": "238f1c39-bb2d-4e43-9f31-d4e4777a21fb",
             "urlName": "numeros-aleatorios",
             "title": "Número Aleátorio",
             "description": "Gere um ou mais números aletórios",
@@ -169,21 +169,21 @@
             ]
           },
           {
-            "id": 2,
+            "id": "41ff4057-ce34-4229-9cd4-278146f3e1e4",
             "urlName": "sorteio",
             "title": "Sorteio",
             "description": "Sorteie um vencedor",
             "functionsList": ["Nomes", "Palavras", "Números"]
           },
           {
-            "id": 3,
+            "id": "2597fd35-5848-40c8-be18-509d1d6fca6a",
             "urlName": "simular-dados",
             "title": "Simulador de Dados",
             "description": "Jogue Dados",
             "functionsList": ["Quantos dados quiser"]
           },
           {
-            "id": 4,
+            "id": "74eadd36-9f42-4fa1-8238-65c4e4b3b791",
             "urlName": "sortear-equipe",
             "title": "Sorteie Equipes",
             "description": "Crie equipes e grupos aleatórios a partir de uma lista de participantes.",

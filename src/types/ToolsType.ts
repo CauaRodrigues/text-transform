@@ -5,7 +5,7 @@ export type CategoriesType = {
 };
 
 export type ToolsType = {
-  id: number;
+  id: string;
   urlName: string;
   title: string;
   description: string;
