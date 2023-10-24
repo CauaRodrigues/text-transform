@@ -19,15 +19,11 @@ export default function SearchFieldWithSuggestions() {
 
   const filteredTools = (obj: CategoriesType) =>
     obj.tools.filter((tool) => {
-      const filterByUrlName = tool.urlName
-        .toLowerCase()
-        .includes(searchFieldValue.toLowerCase());
-
       const filterByTitle = tool.title
         .toLowerCase()
         .includes(searchFieldValue.toLowerCase());
 
-      return filterByTitle || filterByUrlName;
+      return filterByTitle;
     });
 
   return (
