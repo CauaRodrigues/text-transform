@@ -34,7 +34,9 @@ export default function SearchFieldWithSuggestions() {
         <ul>
           {content.map((category) =>
             filteredTools(category).map((tool) => (
-              <li key={tool.id}>{tool.title}</li>
+              <li key={tool.id}>
+                <a href={`/ferramentas/${tool.urlName}`}>{tool.title}</a>
+              </li>
             )),
           )}
         </ul>
